@@ -40,7 +40,8 @@ npm run test:e2e
 This project uses `HashRouter` and `base: "./"` to stay GitHub Pages–friendly.
 
 1. Push to `main`.
-2. GitHub Actions builds and deploys to Pages.
+2. In GitHub: **Repo → Settings → Pages → Source = GitHub Actions**.
+3. GitHub Actions builds and deploys to Pages.
 
 If you need a custom base path later, update `vite.config.ts` and the `deploy.yml` workflow accordingly.
 
