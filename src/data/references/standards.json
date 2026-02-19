@@ -1,0 +1,16 @@
+[
+  {
+    "id": "as-1684",
+    "title": "AS 1684 (Timber Framing)",
+    "summary": "Summary only. Check current framing spans, tie-downs, and bracing.",
+    "tags": ["framing", "timber"],
+    "sourceUrl": "https://store.standards.org.au/"
+  },
+  {
+    "id": "as-3959",
+    "title": "AS 3959 (Construction in Bushfire-Prone Areas)",
+    "summary": "Summary only. Verify BAL requirements and material selections.",
+    "tags": ["bushfire", "materials"],
+    "sourceUrl": "https://store.standards.org.au/"
+  }
+]

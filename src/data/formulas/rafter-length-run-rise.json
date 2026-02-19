@@ -1,0 +1,41 @@
+{
+  "id": "rafter-length-run-rise",
+  "title": "Rafter Length from Run & Pitch",
+  "category": "Roofing",
+  "tags": ["roofing", "rafter", "pitch"],
+  "summary": "Calculate rafter length using run and roof pitch in degrees.",
+  "whenToUse": "Use when you know the run and pitch angle.",
+  "howToUse": ["Enter run and pitch angle.", "Calculate the rafter length."],
+  "steps": [
+    "Confirm the pitch angle is in degrees.",
+    "Divide run by cos(angle).",
+    "Report the rafter length."
+  ],
+  "example": {
+    "inputs": { "run": 3.6, "degrees": 22.5 },
+    "outputs": { "length": 3.89 },
+    "explanation": "3.6 / cos(22.5°) ≈ 3.89 m."
+  },
+  "commonMistakes": [
+    "Using total span instead of run.",
+    "Using degrees when the calculator expects radians."
+  ],
+  "siteTips": [
+    "Add overhang separately if needed.",
+    "Check the rafter length against stock lengths."
+  ],
+  "verification": "The rafter length should be slightly longer than the run.",
+  "related": ["pythagoras-rafter", "roof-pitch-angle"],
+  "calculator": {
+    "id": "rafter-length-run-rise",
+    "title": "Rafter Length (Run + Angle)",
+    "inputs": [
+      { "key": "run", "label": "Run", "unit": "m", "min": 0.2, "allowUnitSelect": true },
+      { "key": "degrees", "label": "Pitch Angle", "unit": "deg", "min": 0, "max": 89 }
+    ],
+    "outputs": [
+      { "key": "length", "label": "Rafter Length", "unit": "m", "precision": 3 }
+    ],
+    "compute": "rafterLengthFromRunAngle"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "unit-convert-area",
+  "title": "Area Conversion",
+  "category": "Conversions",
+  "tags": ["conversion", "area", "units"],
+  "summary": "Convert between square metres and square millimetres.",
+  "whenToUse": "Use for area takeoffs when drawings use different units.",
+  "howToUse": ["Enter the area and select the conversion direction."],
+  "steps": [
+    "Confirm the input unit.",
+    "Convert to the output unit.",
+    "Round to an appropriate precision."
+  ],
+  "example": {
+    "inputs": { "area": 12.5 },
+    "outputs": { "areaOut": 12500000 },
+    "explanation": "12.5 m² = 12,500,000 mm²."
+  },
+  "commonMistakes": ["Forgetting that square units scale by 1,000,000 when converting m² to mm²."],
+  "siteTips": ["Keep larger units for clarity unless a detail requires mm²."],
+  "verification": "The converted number should be much larger in mm².",
+  "related": ["unit-convert-length"],
+  "calculator": {
+    "id": "unit-convert-area",
+    "title": "Area Conversion",
+    "inputs": [
+      { "key": "area", "label": "Area (m²)", "unit": "m2", "min": 0 }
+    ],
+    "outputs": [{ "key": "areaOut", "label": "Area (mm²)", "unit": "mm2", "precision": 0 }],
+    "compute": "convertArea"
+  }
+}

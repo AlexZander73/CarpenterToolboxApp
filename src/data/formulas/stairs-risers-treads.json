@@ -1,0 +1,49 @@
+{
+  "id": "stairs-risers-treads",
+  "title": "Stair Risers and Treads",
+  "category": "Stairs",
+  "tags": ["stairs", "set-out", "rise", "run"],
+  "summary": "Estimate riser and tread counts from total rise/run.",
+  "whenToUse": "Use in early set-out to check stair comfort and counts.",
+  "howToUse": [
+    "Enter total rise and total run.",
+    "Select a target riser height.",
+    "Check tread depth and comfort."
+  ],
+  "steps": [
+    "Divide total rise by target riser height to get riser count.",
+    "Round to the nearest whole number.",
+    "Calculate actual riser height and tread depth."
+  ],
+  "example": {
+    "inputs": { "totalRise": 2.7, "totalRun": 3.6, "targetRiser": 0.175 },
+    "outputs": { "risers": 15, "riserHeight": 0.18, "treads": 14, "treadDepth": 0.257 },
+    "explanation": "2.7 / 0.175 ≈ 15 risers, giving ~180 mm riser height."
+  },
+  "commonMistakes": [
+    "Forgetting that treads are one fewer than risers.",
+    "Ignoring comfort checks and landings."
+  ],
+  "siteTips": [
+    "Check headroom and landing sizes early.",
+    "Use a story pole for consistent riser heights."
+  ],
+  "verification": "Riser height should fall within your comfort range.",
+  "related": ["pythagoras-rafter"],
+  "calculator": {
+    "id": "stairs-risers-treads",
+    "title": "Stair Counts",
+    "inputs": [
+      { "key": "totalRise", "label": "Total Rise", "unit": "m", "min": 0.2, "allowUnitSelect": true },
+      { "key": "totalRun", "label": "Total Run", "unit": "m", "min": 0.2, "allowUnitSelect": true },
+      { "key": "targetRiser", "label": "Target Riser Height", "unit": "m", "min": 0.12, "max": 0.25, "allowUnitSelect": true }
+    ],
+    "outputs": [
+      { "key": "risers", "label": "Risers", "unit": "count", "precision": 0 },
+      { "key": "riserHeight", "label": "Actual Riser Height", "unit": "m", "precision": 3 },
+      { "key": "treads", "label": "Treads", "unit": "count", "precision": 0 },
+      { "key": "treadDepth", "label": "Tread Depth", "unit": "m", "precision": 3 }
+    ],
+    "compute": "stairsRisersTreads"
+  }
+}

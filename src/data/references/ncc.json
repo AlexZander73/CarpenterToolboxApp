@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ncc-2022-vol2-placeholder-1",
+    "title": "NCC 2022 Volume 2 – [Clause Placeholder]",
+    "summary": "Summary only. Review this clause for stair geometry and safety checks.",
+    "tags": ["stairs", "safety"],
+    "sourceUrl": "https://ncc.abcb.gov.au/"
+  },
+  {
+    "id": "ncc-2022-vol2-placeholder-2",
+    "title": "NCC 2022 Volume 2 – [Clause Placeholder]",
+    "summary": "Summary only. Review for roof drainage and weatherproofing requirements.",
+    "tags": ["roofing", "drainage"],
+    "sourceUrl": "https://ncc.abcb.gov.au/"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "id": "waste-factor",
+  "title": "Waste Factor",
+  "category": "Estimating/Takeoff",
+  "tags": ["estimating", "waste", "ordering"],
+  "summary": "Apply a waste percentage to a base quantity.",
+  "whenToUse": "Use when ordering materials to allow for cuts, defects, and offcuts.",
+  "howToUse": ["Enter base quantity and waste percentage.", "Get total required."],
+  "steps": [
+    "Confirm the base quantity is in the right unit.",
+    "Apply the waste percentage.",
+    "Round up for ordering."
+  ],
+  "example": {
+    "inputs": { "base": 18, "wastePercent": 10 },
+    "outputs": { "total": 19.8 },
+    "explanation": "18 × 1.10 = 19.8."
+  },
+  "commonMistakes": [
+    "Applying waste twice by stacking percentages.",
+    "Rounding too early for large orders."
+  ],
+  "siteTips": [
+    "Keep a standard waste allowance in settings for speed.",
+    "Use higher waste on complex profiles."
+  ],
+  "verification": "Check that total is base plus the waste amount.",
+  "related": ["volume-rectangular-prism"],
+  "calculator": {
+    "id": "waste-factor",
+    "title": "Waste Allowance",
+    "inputs": [
+      { "key": "base", "label": "Base Quantity", "unit": "count", "min": 0 },
+      { "key": "wastePercent", "label": "Waste %", "unit": "percent", "min": 0, "max": 100 }
+    ],
+    "outputs": [
+      { "key": "total", "label": "Total Required", "unit": "count", "precision": 2 }
+    ],
+    "compute": "wasteFactor"
+  }
+}

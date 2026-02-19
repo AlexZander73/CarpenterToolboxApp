@@ -1,0 +1,40 @@
+{
+  "id": "volume-rectangular-prism",
+  "title": "Volume of a Rectangular Prism",
+  "category": "Geometry",
+  "tags": ["volume", "concrete", "excavation"],
+  "summary": "Find volume for a box-shaped space using length, width, and height.",
+  "whenToUse": "Use for concrete, excavation, or material volume estimates.",
+  "howToUse": ["Measure length, width, height.", "Multiply L × W × H."],
+  "steps": [
+    "Convert all dimensions to the same unit.",
+    "Multiply length by width, then by height.",
+    "Record in cubic units."
+  ],
+  "example": {
+    "inputs": { "length": 2.5, "width": 1.2, "height": 0.3 },
+    "outputs": { "volume": 0.9 },
+    "explanation": "2.5 × 1.2 × 0.3 = 0.9 m³."
+  },
+  "commonMistakes": [
+    "Using millimetres without conversion.",
+    "Mixing internal and external dimensions."
+  ],
+  "siteTips": [
+    "Allow for wastage and shrinkage when ordering concrete.",
+    "Round up to the nearest delivery increment."
+  ],
+  "verification": "Check that the volume aligns with a quick box estimate.",
+  "related": ["area-rectangle"],
+  "calculator": {
+    "id": "volume-rectangular-prism",
+    "title": "Rectangular Volume",
+    "inputs": [
+      { "key": "length", "label": "Length", "unit": "m", "min": 0, "allowUnitSelect": true },
+      { "key": "width", "label": "Width", "unit": "m", "min": 0, "allowUnitSelect": true },
+      { "key": "height", "label": "Height", "unit": "m", "min": 0, "allowUnitSelect": true }
+    ],
+    "outputs": [{ "key": "volume", "label": "Volume", "unit": "m3", "precision": 3 }],
+    "compute": "volumeRectangular"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "area-circle",
+  "title": "Area of a Circle",
+  "category": "Geometry",
+  "tags": ["area", "layout", "features"],
+  "summary": "Find the area of a circle using radius or diameter.",
+  "whenToUse": "Use for round features like posts, columns, or circular cut-outs.",
+  "howToUse": ["Measure diameter or radius.", "Use Area = π × r²."],
+  "steps": [
+    "If you have diameter, halve it to get radius.",
+    "Square the radius.",
+    "Multiply by π to get area."
+  ],
+  "example": {
+    "inputs": { "radius": 0.3 },
+    "outputs": { "area": 0.283 },
+    "explanation": "π × 0.3² ≈ 0.283 m²."
+  },
+  "commonMistakes": [
+    "Using diameter as radius.",
+    "Mixing units for radius and output."
+  ],
+  "siteTips": [
+    "Use a trammel or string line for reliable radius measurements.",
+    "Keep more decimal places for small circles."
+  ],
+  "verification": "Area should be a little under 0.3 m² for a 0.6 m diameter.",
+  "related": ["area-rectangle"],
+  "calculator": {
+    "id": "area-circle",
+    "title": "Circle Area",
+    "inputs": [
+      { "key": "radius", "label": "Radius", "unit": "m", "min": 0, "allowUnitSelect": true }
+    ],
+    "outputs": [{ "key": "area", "label": "Area", "unit": "m2", "precision": 3 }],
+    "compute": "areaCircle"
+  }
+}

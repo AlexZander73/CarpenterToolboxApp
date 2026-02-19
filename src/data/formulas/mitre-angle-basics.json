@@ -1,0 +1,41 @@
+{
+  "id": "mitre-angle-basics",
+  "title": "Mitre Angles (Common Cases)",
+  "category": "Measuring & Set-out",
+  "tags": ["mitre", "angles", "trim"],
+  "summary": "Quick reference for common mitre cuts with context.",
+  "whenToUse": "Use for common trim and framing junctions requiring equal mitres.",
+  "howToUse": [
+    "For a square corner (90°), set each mitre to 45°.",
+    "For an octagon corner (135° internal), set each mitre to 22.5°."
+  ],
+  "steps": [
+    "Identify the total included angle of the corner.",
+    "Divide the included angle by two for equal mitres.",
+    "Set the saw and test-fit with offcuts."
+  ],
+  "example": {
+    "inputs": { "includedAngle": 90 },
+    "outputs": { "mitre": 45 },
+    "explanation": "A 90° corner needs two 45° mitres."
+  },
+  "commonMistakes": [
+    "Confusing internal and external angles.",
+    "Cutting two left-hand mitres instead of left/right."
+  ],
+  "siteTips": [
+    "Test with a short offcut before committing to the final piece.",
+    "Label mating pieces to keep pairs aligned."
+  ],
+  "verification": "Dry-fit the mitres to confirm the corner closes cleanly.",
+  "related": ["slope-percent"],
+  "calculator": {
+    "id": "mitre-angle-basics",
+    "title": "Mitre Angle",
+    "inputs": [
+      { "key": "includedAngle", "label": "Included Angle", "unit": "deg", "min": 0, "max": 180 }
+    ],
+    "outputs": [{ "key": "mitre", "label": "Mitre Setting", "unit": "deg", "precision": 2 }],
+    "compute": "mitreAngle"
+  }
+}

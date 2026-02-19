@@ -1,0 +1,40 @@
+{
+  "id": "area-triangle",
+  "title": "Area of a Triangle",
+  "category": "Geometry",
+  "tags": ["area", "roofing", "set-out"],
+  "summary": "Find the area of a triangle using base and height.",
+  "equation": "Area = (Base × Height) ÷ 2",
+  "whenToUse": "Use for gables, triangular roof sections, or bracing layouts.",
+  "howToUse": ["Measure base and height.", "Use Area = (Base × Height) ÷ 2."],
+  "steps": [
+    "Confirm base and height are perpendicular.",
+    "Multiply base by height.",
+    "Divide by two to get the area."
+  ],
+  "example": {
+    "inputs": { "base": 4, "height": 2.5 },
+    "outputs": { "area": 5 },
+    "explanation": "4 × 2.5 ÷ 2 = 5 m²."
+  },
+  "commonMistakes": [
+    "Using the sloping side instead of the perpendicular height.",
+    "Forgetting to divide by two."
+  ],
+  "siteTips": [
+    "Mark a right angle to confirm the height measurement.",
+    "Use a story pole for consistent heights on repeatable triangles."
+  ],
+  "verification": "Area should be about half the rectangle with same base and height.",
+  "related": ["area-rectangle", "pythagoras-rafter"],
+  "calculator": {
+    "id": "area-triangle",
+    "title": "Triangle Area",
+    "inputs": [
+      { "key": "base", "label": "Base", "unit": "m", "min": 0, "allowUnitSelect": true },
+      { "key": "height", "label": "Height", "unit": "m", "min": 0, "allowUnitSelect": true }
+    ],
+    "outputs": [{ "key": "area", "label": "Area", "unit": "m2", "precision": 3 }],
+    "compute": "areaTriangle"
+  }
+}

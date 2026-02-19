@@ -1,0 +1,45 @@
+{
+  "id": "board-feet-metric",
+  "title": "Board Feet (Metric Equivalent)",
+  "category": "Estimating/Takeoff",
+  "tags": ["timber", "estimating", "volume"],
+  "summary": "Convert metric dimensions into board feet for mixed-spec timber.",
+  "whenToUse": "Use when suppliers quote in board feet but your measurements are metric.",
+  "howToUse": [
+    "Enter thickness, width, and length.",
+    "Convert to board feet using the standard factor."
+  ],
+  "steps": [
+    "Convert all dimensions to millimetres.",
+    "Multiply thickness × width × length.",
+    "Divide by 2,359,737 to get board feet."
+  ],
+  "example": {
+    "inputs": { "thickness": 25, "width": 150, "length": 2400 },
+    "outputs": { "boardFeet": 9.55 },
+    "explanation": "25×150×2400 ÷ 2,359,737 ≈ 9.55 bd ft."
+  },
+  "commonMistakes": [
+    "Using metres instead of millimetres without converting.",
+    "Forgetting board feet is a volume measure."
+  ],
+  "siteTips": [
+    "Keep metric as the primary record for clarity.",
+    "Round up when ordering to allow for trim."
+  ],
+  "verification": "A standard 90×45×2.4 m piece is around 3.7 bd ft.",
+  "related": ["volume-rectangular-prism"],
+  "calculator": {
+    "id": "board-feet-metric",
+    "title": "Board Feet (Metric)",
+    "inputs": [
+      { "key": "thickness", "label": "Thickness", "unit": "mm", "min": 1, "allowUnitSelect": true },
+      { "key": "width", "label": "Width", "unit": "mm", "min": 1, "allowUnitSelect": true },
+      { "key": "length", "label": "Length", "unit": "mm", "min": 1, "allowUnitSelect": true }
+    ],
+    "outputs": [
+      { "key": "boardFeet", "label": "Board Feet", "unit": "count", "precision": 2 }
+    ],
+    "compute": "boardFeetMetric"
+  }
+}

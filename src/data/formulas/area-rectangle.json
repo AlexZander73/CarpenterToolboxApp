@@ -1,0 +1,40 @@
+{
+  "id": "area-rectangle",
+  "title": "Area of a Rectangle",
+  "category": "Geometry",
+  "tags": ["area", "layout", "flooring"],
+  "summary": "Find the area of a rectangle using length and width.",
+  "equation": "Area = Length × Width",
+  "whenToUse": "Use for rectangular rooms, sheets, or any straight-edged surface.",
+  "howToUse": ["Measure length and width in the same unit.", "Multiply L × W."],
+  "steps": [
+    "Confirm both measurements are in the same unit.",
+    "Multiply length by width.",
+    "Record the area in square units."
+  ],
+  "example": {
+    "inputs": { "length": 3.6, "width": 2.4 },
+    "outputs": { "area": 8.64 },
+    "explanation": "3.6 m × 2.4 m = 8.64 m²."
+  },
+  "commonMistakes": [
+    "Mixing millimetres and metres without converting.",
+    "Using external dimensions when internal area is needed."
+  ],
+  "siteTips": [
+    "If you're working from plans, check whether dimensions are internal or external.",
+    "Round only after multiplying to keep accuracy."
+  ],
+  "verification": "Sanity-check by estimating: 3.6 × 2.4 is a bit under 9.",
+  "related": ["area-triangle", "area-circle"],
+  "calculator": {
+    "id": "area-rectangle",
+    "title": "Rectangle Area",
+    "inputs": [
+      { "key": "length", "label": "Length", "unit": "m", "min": 0, "allowUnitSelect": true },
+      { "key": "width", "label": "Width", "unit": "m", "min": 0, "allowUnitSelect": true }
+    ],
+    "outputs": [{ "key": "area", "label": "Area", "unit": "m2", "precision": 3 }],
+    "compute": "areaRectangle"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "roof-pitch-ratio",
+  "title": "Roof Pitch: Degrees to Rise/Run",
+  "category": "Roofing",
+  "tags": ["roofing", "pitch", "angles"],
+  "summary": "Convert pitch angle in degrees into a rise/run ratio.",
+  "whenToUse": "Use when a pitch angle is given and you need a ratio for set-out.",
+  "howToUse": ["Enter the angle in degrees.", "Use tan(angle) to get rise/run."],
+  "steps": [
+    "Confirm the angle is in degrees.",
+    "Calculate the tangent of the angle.",
+    "Report the ratio as rise per 1 run."
+  ],
+  "example": {
+    "inputs": { "degrees": 22.5 },
+    "outputs": { "ratio": 0.414 },
+    "explanation": "tan(22.5°) ≈ 0.414."
+  },
+  "commonMistakes": [
+    "Using radians instead of degrees.",
+    "Forgetting that the ratio is per 1 unit of run."
+  ],
+  "siteTips": [
+    "Multiply the ratio by your actual run to get rise.",
+    "Keep three decimal places for layout accuracy."
+  ],
+  "verification": "22.5° should be a little under 0.42 rise per 1 run.",
+  "related": ["roof-pitch-angle"],
+  "calculator": {
+    "id": "roof-pitch-ratio",
+    "title": "Degrees to Pitch Ratio",
+    "inputs": [
+      { "key": "degrees", "label": "Angle", "unit": "deg", "min": 0, "max": 89 }
+    ],
+    "outputs": [{ "key": "ratio", "label": "Rise per 1 Run", "unit": "ratio", "precision": 3 }],
+    "compute": "degreesToPitchRatio"
+  }
+}

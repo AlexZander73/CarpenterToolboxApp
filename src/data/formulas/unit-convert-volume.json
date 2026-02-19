@@ -1,0 +1,32 @@
+{
+  "id": "unit-convert-volume",
+  "title": "Volume Conversion",
+  "category": "Conversions",
+  "tags": ["conversion", "volume", "units"],
+  "summary": "Convert between cubic metres and cubic millimetres.",
+  "whenToUse": "Use when detail drawings list volumes in smaller units.",
+  "howToUse": ["Enter the volume in cubic metres to convert."],
+  "steps": [
+    "Confirm the input unit.",
+    "Convert to the output unit.",
+    "Round to a sensible precision."
+  ],
+  "example": {
+    "inputs": { "volume": 0.75 },
+    "outputs": { "volumeOut": 750000000 },
+    "explanation": "0.75 m³ = 750,000,000 mm³."
+  },
+  "commonMistakes": ["Forgetting that cubic units scale by 1,000,000,000 when converting m³ to mm³."],
+  "siteTips": ["Use cubic metres for ordering materials; reserve mm³ for detail checks."],
+  "verification": "The converted number should be far larger in mm³.",
+  "related": ["unit-convert-area"],
+  "calculator": {
+    "id": "unit-convert-volume",
+    "title": "Volume Conversion",
+    "inputs": [
+      { "key": "volume", "label": "Volume (m³)", "unit": "m3", "min": 0 }
+    ],
+    "outputs": [{ "key": "volumeOut", "label": "Volume (mm³)", "unit": "mm3", "precision": 0 }],
+    "compute": "convertVolume"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "roof-pitch-angle",
+  "title": "Roof Pitch: Rise/Run to Degrees",
+  "category": "Roofing",
+  "tags": ["roofing", "pitch", "angles"],
+  "summary": "Convert rise/run pitch into degrees for set-out.",
+  "equation": "Angle = arctan(Rise / Run)",
+  "whenToUse": "Use when plans specify pitch ratio and you need an angle.",
+  "howToUse": ["Divide rise by run.", "Use angle = arctan(rise/run)."],
+  "steps": [
+    "Measure rise and run for one module.",
+    "Divide rise by run to get the slope ratio.",
+    "Convert the ratio to degrees."
+  ],
+  "example": {
+    "inputs": { "rise": 1, "run": 4 },
+    "outputs": { "degrees": 14.036 },
+    "explanation": "arctan(1/4) ≈ 14.036°."
+  },
+  "commonMistakes": [
+    "Entering total span instead of run.",
+    "Using degrees when the calculator expects ratio."
+  ],
+  "siteTips": [
+    "If pitch is given as 1:4, enter rise 1 and run 4.",
+    "Check with a pitch gauge for quick confirmation."
+  ],
+  "verification": "A 1:4 pitch should be a bit over 14°.",
+  "related": ["roof-pitch-ratio"],
+  "calculator": {
+    "id": "roof-pitch-angle",
+    "title": "Pitch to Degrees",
+    "inputs": [
+      { "key": "rise", "label": "Rise", "unit": "m", "min": 0.001, "allowUnitSelect": true },
+      { "key": "run", "label": "Run", "unit": "m", "min": 0.001, "allowUnitSelect": true }
+    ],
+    "outputs": [{ "key": "degrees", "label": "Angle", "unit": "deg", "precision": 3 }],
+    "compute": "roofPitchToDegrees"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "pythagoras-rafter",
+  "title": "Pythagoras for Rafter Length",
+  "category": "Roofing",
+  "tags": ["roofing", "rafter", "triangle"],
+  "summary": "Calculate rafter length from rise and run.",
+  "equation": "Length = √(Rise² + Run²)",
+  "whenToUse": "Use for right triangles like rafters, braces, or set-out lines.",
+  "howToUse": ["Measure rise and run.", "Use c = √(a² + b²)."],
+  "steps": [
+    "Convert rise and run to the same unit.",
+    "Square both values and add them.",
+    "Take the square root to get the rafter length."
+  ],
+  "example": {
+    "inputs": { "rise": 1.2, "run": 2.4 },
+    "outputs": { "length": 2.683 },
+    "explanation": "√(1.2² + 2.4²) ≈ 2.683 m."
+  },
+  "commonMistakes": [
+    "Using pitch ratio instead of actual rise/run.",
+    "Rounding too early before the square root."
+  ],
+  "siteTips": [
+    "Check the rafter length against a tape measure on site.",
+    "Allow for birdsmouth or overhang adjustments separately."
+  ],
+  "verification": "Rafter length should be slightly longer than the run.",
+  "related": ["roof-pitch-angle"],
+  "calculator": {
+    "id": "pythagoras-rafter",
+    "title": "Rafter Length",
+    "inputs": [
+      { "key": "rise", "label": "Rise", "unit": "m", "min": 0, "allowUnitSelect": true },
+      { "key": "run", "label": "Run", "unit": "m", "min": 0, "allowUnitSelect": true }
+    ],
+    "outputs": [{ "key": "length", "label": "Rafter Length", "unit": "m", "precision": 3 }],
+    "compute": "pythagorasRafter"
+  }
+}

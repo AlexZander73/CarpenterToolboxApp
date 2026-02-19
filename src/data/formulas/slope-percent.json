@@ -1,0 +1,36 @@
+{
+  "id": "slope-percent",
+  "title": "Slope Percent to Degrees",
+  "category": "Geometry",
+  "tags": ["slope", "angles", "set-out"],
+  "summary": "Convert slope percent into degrees for layout.",
+  "whenToUse": "Use when grades are given as percent but you need an angle.",
+  "howToUse": ["Enter slope percent to get degrees."],
+  "steps": [
+    "Divide slope percent by 100 to get rise/run ratio.",
+    "Use arctan to convert to degrees."
+  ],
+  "example": {
+    "inputs": { "slopePercent": 12.5 },
+    "outputs": { "degrees": 7.125 },
+    "explanation": "arctan(0.125) ≈ 7.125°."
+  },
+  "commonMistakes": [
+    "Using 12.5 as a ratio instead of percent.",
+    "Confusing rise/run with degrees."
+  ],
+  "siteTips": ["Small percentages translate into small angles."],
+  "verification": "12.5% is just over 7°.",
+  "related": ["roof-pitch-angle"],
+  "calculator": {
+    "id": "slope-percent",
+    "title": "Slope to Degrees",
+    "inputs": [
+      { "key": "slopePercent", "label": "Slope %", "unit": "percent", "min": 0 }
+    ],
+    "outputs": [
+      { "key": "degrees", "label": "Angle", "unit": "deg", "precision": 3 }
+    ],
+    "compute": "slopePercentToDegrees"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "conversion-area-m2-to-m3",
+  "title": "Area to Volume (Thickness)",
+  "category": "Conversions",
+  "tags": ["conversion", "volume", "materials"],
+  "summary": "Convert area to volume using thickness.",
+  "whenToUse": "Use for slab pours or sheet goods with a known thickness.",
+  "howToUse": ["Enter area and thickness.", "Multiply to get volume."],
+  "steps": [
+    "Confirm thickness in metres.",
+    "Multiply area by thickness.",
+    "Record cubic metres."
+  ],
+  "example": {
+    "inputs": { "area": 12, "thickness": 0.1 },
+    "outputs": { "volume": 1.2 },
+    "explanation": "12 m² × 0.1 m = 1.2 m³."
+  },
+  "commonMistakes": [
+    "Using millimetres for thickness without converting.",
+    "Multiplying by the wrong area unit."
+  ],
+  "siteTips": [
+    "Convert thickness from mm to m before using.",
+    "Round up for ordering."
+  ],
+  "verification": "Volume should be area times a small fraction.",
+  "related": ["volume-rectangular-prism"],
+  "calculator": {
+    "id": "conversion-area-m2-to-m3",
+    "title": "Area to Volume",
+    "inputs": [
+      { "key": "area", "label": "Area", "unit": "m2", "min": 0 },
+      { "key": "thickness", "label": "Thickness", "unit": "m", "min": 0, "allowUnitSelect": true }
+    ],
+    "outputs": [
+      { "key": "volume", "label": "Volume", "unit": "m3", "precision": 3 }
+    ],
+    "compute": "areaToVolume"
+  }
+}
