@@ -57,6 +57,10 @@ export type Formula = {
   howToUse: string[]
   steps: string[]
   equation?: string
+  media?: {
+    image?: string
+    animation?: string
+  }
   example: {
     inputs: Record<string, number>
     outputs: Record<string, number>
@@ -75,6 +79,7 @@ export type Lesson = {
   summary: string
   tags: string[]
   content: string
+  image?: string
 }
 
 export type ReferenceItem = {

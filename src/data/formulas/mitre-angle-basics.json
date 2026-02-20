@@ -4,6 +4,10 @@
   "category": "Measuring & Set-out",
   "tags": ["mitre", "angles", "trim"],
   "summary": "Quick reference for common mitre cuts with context.",
+  "media": {
+    "image": "/illustrations/mitre-angle-basics.svg",
+    "animation": "/illustrations/animated/mitre-angle-basics.svg"
+  },
   "whenToUse": "Use for common trim and framing junctions requiring equal mitres.",
   "howToUse": [
     "For a square corner (90°), set each mitre to 45°.",

@@ -4,6 +4,10 @@
   "category": "Geometry",
   "tags": ["slope", "angles", "set-out"],
   "summary": "Convert slope percent into degrees for layout.",
+  "media": {
+    "image": "/illustrations/slope-percent.svg",
+    "animation": "/illustrations/animated/slope-percent.svg"
+  },
   "whenToUse": "Use when grades are given as percent but you need an angle.",
   "howToUse": ["Enter slope percent to get degrees."],
   "steps": [

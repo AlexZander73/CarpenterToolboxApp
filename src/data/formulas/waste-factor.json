@@ -4,6 +4,10 @@
   "category": "Estimating/Takeoff",
   "tags": ["estimating", "waste", "ordering"],
   "summary": "Apply a waste percentage to a base quantity.",
+  "media": {
+    "image": "/illustrations/waste-factor.svg",
+    "animation": "/illustrations/animated/waste-factor.svg"
+  },
   "whenToUse": "Use when ordering materials to allow for cuts, defects, and offcuts.",
   "howToUse": ["Enter base quantity and waste percentage.", "Get total required."],
   "steps": [

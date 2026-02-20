@@ -4,6 +4,10 @@
   "category": "Conversions",
   "tags": ["conversion", "length", "units"],
   "summary": "Convert between millimetres, centimetres, and metres.",
+  "media": {
+    "image": "/illustrations/unit-convert-length.svg",
+    "animation": "/illustrations/animated/unit-convert-length.svg"
+  },
   "whenToUse": "Use when switching between tape measure units and plan units.",
   "howToUse": ["Enter a length and select source/target units."],
   "steps": [

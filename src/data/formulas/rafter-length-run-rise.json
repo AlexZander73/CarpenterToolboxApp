@@ -4,6 +4,10 @@
   "category": "Roofing",
   "tags": ["roofing", "rafter", "pitch"],
   "summary": "Calculate rafter length using run and roof pitch in degrees.",
+  "media": {
+    "image": "/illustrations/rafter-length-run-rise.svg",
+    "animation": "/illustrations/animated/rafter-length-run-rise.svg"
+  },
   "whenToUse": "Use when you know the run and pitch angle.",
   "howToUse": ["Enter run and pitch angle.", "Calculate the rafter length."],
   "steps": [

@@ -13,6 +13,7 @@ const lessons: Lesson[] = [
     summary: "How to read a metric tape quickly and accurately.",
     tags: ["measurement", "fundamentals"],
     content: readingTape,
+    image: "/illustrations/lessons/reading-tape.svg",
   },
   {
     id: "set-out-fundamentals",
@@ -20,6 +21,7 @@ const lessons: Lesson[] = [
     summary: "Reliable set-out habits that prevent compounding errors.",
     tags: ["set-out", "layout"],
     content: setOutFundamentals,
+    image: "/illustrations/lessons/set-out-fundamentals.svg",
   },
   {
     id: "right-triangles",
@@ -27,6 +29,7 @@ const lessons: Lesson[] = [
     summary: "Use Pythagoras for framing checks and set-out.",
     tags: ["geometry", "roofing"],
     content: rightTriangles,
+    image: "/illustrations/lessons/right-triangles.svg",
   },
   {
     id: "roofing-pitch",
@@ -34,6 +37,7 @@ const lessons: Lesson[] = [
     summary: "Translate pitch ratios into practical set-out decisions.",
     tags: ["roofing", "pitch"],
     content: roofingPitch,
+    image: "/illustrations/lessons/roofing-pitch.svg",
   },
   {
     id: "stair-comfort",
@@ -41,6 +45,7 @@ const lessons: Lesson[] = [
     summary: "Heuristics for comfortable stair layouts (not code).",
     tags: ["stairs", "comfort"],
     content: stairComfort,
+    image: "/illustrations/lessons/stair-comfort.svg",
   },
   {
     id: "estimating-mindset",
@@ -48,6 +53,7 @@ const lessons: Lesson[] = [
     summary: "Build a repeatable estimating workflow.",
     tags: ["estimating", "waste"],
     content: estimatingMindset,
+    image: "/illustrations/lessons/estimating-mindset.svg",
   },
 ]
 

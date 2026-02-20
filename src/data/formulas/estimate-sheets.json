@@ -4,6 +4,10 @@
   "category": "Estimating/Takeoff",
   "tags": ["estimating", "sheets", "lining"],
   "summary": "Estimate sheet count from total area and sheet size.",
+  "media": {
+    "image": "/illustrations/estimate-sheets.svg",
+    "animation": "/illustrations/animated/estimate-sheets.svg"
+  },
   "whenToUse": "Use for lining, cladding, or flooring sheets.",
   "howToUse": ["Enter total area and sheet area.", "Add waste percentage."],
   "steps": [

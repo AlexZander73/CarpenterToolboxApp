@@ -4,6 +4,10 @@
   "category": "Geometry",
   "tags": ["area", "layout", "features"],
   "summary": "Find the area of a circle using radius or diameter.",
+  "media": {
+    "image": "/illustrations/area-circle.svg",
+    "animation": "/illustrations/animated/area-circle.svg"
+  },
   "whenToUse": "Use for round features like posts, columns, or circular cut-outs.",
   "howToUse": ["Measure diameter or radius.", "Use Area = π × r²."],
   "steps": [

@@ -4,6 +4,10 @@
   "category": "Conversions",
   "tags": ["conversion", "area", "units"],
   "summary": "Convert between square metres and square millimetres.",
+  "media": {
+    "image": "/illustrations/unit-convert-area.svg",
+    "animation": "/illustrations/animated/unit-convert-area.svg"
+  },
   "whenToUse": "Use for area takeoffs when drawings use different units.",
   "howToUse": ["Enter the area and select the conversion direction."],
   "steps": [

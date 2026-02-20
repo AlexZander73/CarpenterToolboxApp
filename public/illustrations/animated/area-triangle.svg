@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
+  <polygon points="60,160 260,160 180,40" fill="#f8fafc" stroke="#0f172a" stroke-width="2" stroke-dasharray="6 6"/>
+  <line x1="60" y1="160" x2="260" y2="160" stroke="#0f172a" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="160" y="185" text-anchor="middle" font-size="12" fill="#0f172a">Base</text>
+  <line x1="180" y1="40" x2="180" y2="160" stroke="#0f172a" stroke-width="2" stroke-dasharray="6 6" stroke-dasharray="4 4"/>
+  <text x="190" y="110" font-size="12" fill="#0f172a">Height</text>
+</svg>

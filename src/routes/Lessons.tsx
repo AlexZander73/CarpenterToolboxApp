@@ -30,6 +30,13 @@ const Lessons = () => {
               <CardTitle>{lesson.title}</CardTitle>
               <CardDescription>{lesson.summary}</CardDescription>
             </CardHeader>
+            {lesson.image && (
+              <img
+                src={lesson.image}
+                alt={lesson.title}
+                className="mt-3 w-full rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-2"
+              />
+            )}
             <div className="flex flex-wrap gap-2 text-xs text-[rgb(var(--text-muted))]">
               {lesson.tags.map((tag) => (
                 <span key={tag} className="rounded-full border border-[rgb(var(--border))] px-2 py-1">

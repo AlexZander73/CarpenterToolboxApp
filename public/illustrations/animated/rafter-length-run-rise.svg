@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
+  <polygon points="60,160 240,160 240,80" fill="#f8fafc" stroke="#0f172a" stroke-width="2" stroke-dasharray="6 6"/>
+  <line x1="60" y1="160" x2="240" y2="80" stroke="#0f172a" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="80" y="185" font-size="12" fill="#0f172a">Run</text>
+  <text x="245" y="120" font-size="12" fill="#0f172a">Angle</text>
+</svg>

@@ -5,6 +5,10 @@
   "tags": ["roofing", "pitch", "angles"],
   "summary": "Convert rise/run pitch into degrees for set-out.",
   "equation": "Angle = arctan(Rise / Run)",
+  "media": {
+    "image": "/illustrations/roof-pitch-angle.svg",
+    "animation": "/illustrations/animated/roof-pitch-angle.svg"
+  },
   "whenToUse": "Use when plans specify pitch ratio and you need an angle.",
   "howToUse": ["Divide rise by run.", "Use angle = arctan(rise/run)."],
   "steps": [

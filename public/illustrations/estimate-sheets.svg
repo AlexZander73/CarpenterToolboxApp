@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
+  <rect x="60" y="60" width="200" height="120" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+  <line x1="126" y1="60" x2="126" y2="180" stroke="#0f172a" stroke-width="1"/>
+  <line x1="192" y1="60" x2="192" y2="180" stroke="#0f172a" stroke-width="1"/>
+  <line x1="60" y1="120" x2="260" y2="120" stroke="#0f172a" stroke-width="1"/>
+  <text x="160" y="50" text-anchor="middle" font-size="12" fill="#0f172a">Sheets</text>
+</svg>

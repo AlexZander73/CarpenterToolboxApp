@@ -5,6 +5,10 @@
   "tags": ["roofing", "rafter", "triangle"],
   "summary": "Calculate rafter length from rise and run.",
   "equation": "Length = √(Rise² + Run²)",
+  "media": {
+    "image": "/illustrations/pythagoras-rafter.svg",
+    "animation": "/illustrations/animated/pythagoras-rafter.svg"
+  },
   "whenToUse": "Use for right triangles like rafters, braces, or set-out lines.",
   "howToUse": ["Measure rise and run.", "Use c = √(a² + b²)."],
   "steps": [

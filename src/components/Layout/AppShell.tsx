@@ -6,6 +6,7 @@ import BottomNav from "./BottomNav"
 import AppFooter from "./AppFooter"
 import CommandPalette from "../Search/CommandPalette"
 import PwaStatus from "../PWA/PwaStatus"
+import ErrorBoundary from "./ErrorBoundary"
 
 const AppShell = () => {
   const [isPaletteOpen, setIsPaletteOpen] = useState(false)
@@ -36,7 +37,9 @@ const AppShell = () => {
       <div className="mx-auto flex w-full max-w-6xl gap-6 px-4 pb-24 pt-6">
         <SidebarNav />
         <main className="min-w-0 flex-1 transition-soft">
-          <Outlet />
+          <ErrorBoundary>
+            <Outlet />
+          </ErrorBoundary>
         </main>
       </div>
       <AppFooter />

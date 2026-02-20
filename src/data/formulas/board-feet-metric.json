@@ -4,6 +4,10 @@
   "category": "Estimating/Takeoff",
   "tags": ["timber", "estimating", "volume"],
   "summary": "Convert metric dimensions into board feet for mixed-spec timber.",
+  "media": {
+    "image": "/illustrations/board-feet-metric.svg",
+    "animation": "/illustrations/animated/board-feet-metric.svg"
+  },
   "whenToUse": "Use when suppliers quote in board feet but your measurements are metric.",
   "howToUse": [
     "Enter thickness, width, and length.",

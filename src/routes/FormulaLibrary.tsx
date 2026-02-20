@@ -28,6 +28,13 @@ const FormulaLibrary = () => {
               <CardTitle>{formula.title}</CardTitle>
               <CardDescription>{formula.summary}</CardDescription>
             </CardHeader>
+            {formula.media?.image && (
+              <img
+                src={formula.media.image}
+                alt={formula.title}
+                className="mt-3 w-full rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-2"
+              />
+            )}
             <p className="text-xs text-[rgb(var(--text-muted))]">
               Category: {formula.category}
             </p>

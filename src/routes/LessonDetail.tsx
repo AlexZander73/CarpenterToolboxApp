@@ -36,6 +36,11 @@ const LessonDetail = () => {
               <CardTitle>{lesson.title}</CardTitle>
               <CardDescription>{lesson.summary}</CardDescription>
             </CardHeader>
+            {lesson.image && (
+              <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-3">
+                <img src={lesson.image} alt={lesson.title} className="w-full" />
+              </div>
+            )}
             <Button
               variant={isFavorite(lesson.id, "lesson") ? "primary" : "secondary"}
               onClick={() =>

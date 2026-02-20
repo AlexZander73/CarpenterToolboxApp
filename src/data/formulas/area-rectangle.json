@@ -5,6 +5,10 @@
   "tags": ["area", "layout", "flooring"],
   "summary": "Find the area of a rectangle using length and width.",
   "equation": "Area = Length × Width",
+  "media": {
+    "image": "/illustrations/area-rectangle.svg",
+    "animation": "/illustrations/animated/area-rectangle.svg"
+  },
   "whenToUse": "Use for rectangular rooms, sheets, or any straight-edged surface.",
   "howToUse": ["Measure length and width in the same unit.", "Multiply L × W."],
   "steps": [

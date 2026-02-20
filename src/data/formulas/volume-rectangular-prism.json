@@ -4,6 +4,10 @@
   "category": "Geometry",
   "tags": ["volume", "concrete", "excavation"],
   "summary": "Find volume for a box-shaped space using length, width, and height.",
+  "media": {
+    "image": "/illustrations/volume-rectangular-prism.svg",
+    "animation": "/illustrations/animated/volume-rectangular-prism.svg"
+  },
   "whenToUse": "Use for concrete, excavation, or material volume estimates.",
   "howToUse": ["Measure length, width, height.", "Multiply L × W × H."],
   "steps": [

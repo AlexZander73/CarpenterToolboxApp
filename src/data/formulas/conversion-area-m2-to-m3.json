@@ -4,6 +4,10 @@
   "category": "Conversions",
   "tags": ["conversion", "volume", "materials"],
   "summary": "Convert area to volume using thickness.",
+  "media": {
+    "image": "/illustrations/conversion-area-m2-to-m3.svg",
+    "animation": "/illustrations/animated/conversion-area-m2-to-m3.svg"
+  },
   "whenToUse": "Use for slab pours or sheet goods with a known thickness.",
   "howToUse": ["Enter area and thickness.", "Multiply to get volume."],
   "steps": [

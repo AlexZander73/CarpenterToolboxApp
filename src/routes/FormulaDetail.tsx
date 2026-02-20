@@ -41,6 +41,24 @@ const FormulaDetail = () => {
               <CardTitle>{formula.title}</CardTitle>
               <CardDescription>{formula.summary}</CardDescription>
             </CardHeader>
+            {formula.media?.image && (
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-3">
+                  <p className="text-xs text-[rgb(var(--text-muted))]">Example</p>
+                  <img src={formula.media.image} alt={formula.title} className="mt-2 w-full" />
+                </div>
+                {formula.media.animation && (
+                  <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-3">
+                    <p className="text-xs text-[rgb(var(--text-muted))]">Animated guide</p>
+                    <img
+                      src={formula.media.animation}
+                      alt={`${formula.title} animation`}
+                      className="mt-2 w-full"
+                    />
+                  </div>
+                )}
+              </div>
+            )}
             <div className="flex flex-wrap gap-2">
               <Button
                 variant={isFavorite(formula.id, "formula") ? "primary" : "secondary"}

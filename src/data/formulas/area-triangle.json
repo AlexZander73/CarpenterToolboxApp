@@ -5,6 +5,10 @@
   "tags": ["area", "roofing", "set-out"],
   "summary": "Find the area of a triangle using base and height.",
   "equation": "Area = (Base × Height) ÷ 2",
+  "media": {
+    "image": "/illustrations/area-triangle.svg",
+    "animation": "/illustrations/animated/area-triangle.svg"
+  },
   "whenToUse": "Use for gables, triangular roof sections, or bracing layouts.",
   "howToUse": ["Measure base and height.", "Use Area = (Base × Height) ÷ 2."],
   "steps": [

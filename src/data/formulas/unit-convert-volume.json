@@ -4,6 +4,10 @@
   "category": "Conversions",
   "tags": ["conversion", "volume", "units"],
   "summary": "Convert between cubic metres and cubic millimetres.",
+  "media": {
+    "image": "/illustrations/unit-convert-volume.svg",
+    "animation": "/illustrations/animated/unit-convert-volume.svg"
+  },
   "whenToUse": "Use when detail drawings list volumes in smaller units.",
   "howToUse": ["Enter the volume in cubic metres to convert."],
   "steps": [

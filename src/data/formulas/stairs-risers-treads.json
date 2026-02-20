@@ -4,6 +4,10 @@
   "category": "Stairs",
   "tags": ["stairs", "set-out", "rise", "run"],
   "summary": "Estimate riser and tread counts from total rise/run.",
+  "media": {
+    "image": "/illustrations/stairs-risers-treads.svg",
+    "animation": "/illustrations/animated/stairs-risers-treads.svg"
+  },
   "whenToUse": "Use in early set-out to check stair comfort and counts.",
   "howToUse": [
     "Enter total rise and total run.",
