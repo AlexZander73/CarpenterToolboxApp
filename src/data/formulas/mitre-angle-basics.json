@@ -2,16 +2,27 @@
   "id": "mitre-angle-basics",
   "title": "Mitre Angles (Common Cases)",
   "category": "Measuring & Set-out",
-  "tags": ["mitre", "angles", "trim"],
+  "tags": [
+    "mitre",
+    "angles",
+    "trim"
+  ],
   "summary": "Quick reference for common mitre cuts with context.",
   "media": {
     "image": "/illustrations/mitre-angle-basics.svg",
-    "animation": "/illustrations/animated/mitre-angle-basics.svg"
+    "animation": "/illustrations/animated/mitre-angle-basics.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/7483040/pexels-photo-7483040.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Carpentry tools and plans",
+      "credit": "Photo by cottonbro studio / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/tools-in-a-carpentry-7483040/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use for common trim and framing junctions requiring equal mitres.",
   "howToUse": [
-    "For a square corner (90°), set each mitre to 45°.",
-    "For an octagon corner (135° internal), set each mitre to 22.5°."
+    "For a square corner (90\u00b0), set each mitre to 45\u00b0.",
+    "For an octagon corner (135\u00b0 internal), set each mitre to 22.5\u00b0."
   ],
   "steps": [
     "Identify the total included angle of the corner.",
@@ -19,9 +30,13 @@
     "Set the saw and test-fit with offcuts."
   ],
   "example": {
-    "inputs": { "includedAngle": 90 },
-    "outputs": { "mitre": 45 },
-    "explanation": "A 90° corner needs two 45° mitres."
+    "inputs": {
+      "includedAngle": 90
+    },
+    "outputs": {
+      "mitre": 45
+    },
+    "explanation": "A 90\u00b0 corner needs two 45\u00b0 mitres."
   },
   "commonMistakes": [
     "Confusing internal and external angles.",
@@ -32,14 +47,29 @@
     "Label mating pieces to keep pairs aligned."
   ],
   "verification": "Dry-fit the mitres to confirm the corner closes cleanly.",
-  "related": ["slope-percent"],
+  "related": [
+    "slope-percent"
+  ],
   "calculator": {
     "id": "mitre-angle-basics",
     "title": "Mitre Angle",
     "inputs": [
-      { "key": "includedAngle", "label": "Included Angle", "unit": "deg", "min": 0, "max": 180 }
+      {
+        "key": "includedAngle",
+        "label": "Included Angle",
+        "unit": "deg",
+        "min": 0,
+        "max": 180
+      }
     ],
-    "outputs": [{ "key": "mitre", "label": "Mitre Setting", "unit": "deg", "precision": 2 }],
+    "outputs": [
+      {
+        "key": "mitre",
+        "label": "Mitre Setting",
+        "unit": "deg",
+        "precision": 2
+      }
+    ],
     "compute": "mitreAngle"
   }
 }

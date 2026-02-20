@@ -2,24 +2,43 @@
   "id": "area-rectangle",
   "title": "Area of a Rectangle",
   "category": "Geometry",
-  "tags": ["area", "layout", "flooring"],
+  "tags": [
+    "area",
+    "layout",
+    "flooring"
+  ],
   "summary": "Find the area of a rectangle using length and width.",
-  "equation": "Area = Length × Width",
+  "equation": "Area = Length \u00d7 Width",
   "media": {
     "image": "/illustrations/area-rectangle.svg",
-    "animation": "/illustrations/animated/area-rectangle.svg"
+    "animation": "/illustrations/animated/area-rectangle.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/4048078/pexels-photo-4048078.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Tape measure on timber",
+      "credit": "Photo by Erik Mclean / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/close-up-photo-of-measuring-tape-4048078/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use for rectangular rooms, sheets, or any straight-edged surface.",
-  "howToUse": ["Measure length and width in the same unit.", "Multiply L × W."],
+  "howToUse": [
+    "Measure length and width in the same unit.",
+    "Multiply L \u00d7 W."
+  ],
   "steps": [
     "Confirm both measurements are in the same unit.",
     "Multiply length by width.",
     "Record the area in square units."
   ],
   "example": {
-    "inputs": { "length": 3.6, "width": 2.4 },
-    "outputs": { "area": 8.64 },
-    "explanation": "3.6 m × 2.4 m = 8.64 m²."
+    "inputs": {
+      "length": 3.6,
+      "width": 2.4
+    },
+    "outputs": {
+      "area": 8.64
+    },
+    "explanation": "3.6 m \u00d7 2.4 m = 8.64 m\u00b2."
   },
   "commonMistakes": [
     "Mixing millimetres and metres without converting.",
@@ -29,16 +48,38 @@
     "If you're working from plans, check whether dimensions are internal or external.",
     "Round only after multiplying to keep accuracy."
   ],
-  "verification": "Sanity-check by estimating: 3.6 × 2.4 is a bit under 9.",
-  "related": ["area-triangle", "area-circle"],
+  "verification": "Sanity-check by estimating: 3.6 \u00d7 2.4 is a bit under 9.",
+  "related": [
+    "area-triangle",
+    "area-circle"
+  ],
   "calculator": {
     "id": "area-rectangle",
     "title": "Rectangle Area",
     "inputs": [
-      { "key": "length", "label": "Length", "unit": "m", "min": 0, "allowUnitSelect": true },
-      { "key": "width", "label": "Width", "unit": "m", "min": 0, "allowUnitSelect": true }
+      {
+        "key": "length",
+        "label": "Length",
+        "unit": "m",
+        "min": 0,
+        "allowUnitSelect": true
+      },
+      {
+        "key": "width",
+        "label": "Width",
+        "unit": "m",
+        "min": 0,
+        "allowUnitSelect": true
+      }
     ],
-    "outputs": [{ "key": "area", "label": "Area", "unit": "m2", "precision": 3 }],
+    "outputs": [
+      {
+        "key": "area",
+        "label": "Area",
+        "unit": "m2",
+        "precision": 3
+      }
+    ],
     "compute": "areaRectangle"
   }
 }

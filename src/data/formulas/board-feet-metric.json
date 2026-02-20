@@ -2,11 +2,22 @@
   "id": "board-feet-metric",
   "title": "Board Feet (Metric Equivalent)",
   "category": "Estimating/Takeoff",
-  "tags": ["timber", "estimating", "volume"],
+  "tags": [
+    "timber",
+    "estimating",
+    "volume"
+  ],
   "summary": "Convert metric dimensions into board feet for mixed-spec timber.",
   "media": {
     "image": "/illustrations/board-feet-metric.svg",
-    "animation": "/illustrations/animated/board-feet-metric.svg"
+    "animation": "/illustrations/animated/board-feet-metric.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/30285503/pexels-photo-30285503.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Stack of timber boards",
+      "credit": "Photo by Jean Marc Pampuch / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/stack-of-freshly-cut-lumber-in-sunlight-30285503/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use when suppliers quote in board feet but your measurements are metric.",
   "howToUse": [
@@ -15,13 +26,19 @@
   ],
   "steps": [
     "Convert all dimensions to millimetres.",
-    "Multiply thickness × width × length.",
+    "Multiply thickness \u00d7 width \u00d7 length.",
     "Divide by 2,359,737 to get board feet."
   ],
   "example": {
-    "inputs": { "thickness": 25, "width": 150, "length": 2400 },
-    "outputs": { "boardFeet": 9.55 },
-    "explanation": "25×150×2400 ÷ 2,359,737 ≈ 9.55 bd ft."
+    "inputs": {
+      "thickness": 25,
+      "width": 150,
+      "length": 2400
+    },
+    "outputs": {
+      "boardFeet": 9.55
+    },
+    "explanation": "25\u00d7150\u00d72400 \u00f7 2,359,737 \u2248 9.55 bd ft."
   },
   "commonMistakes": [
     "Using metres instead of millimetres without converting.",
@@ -31,18 +48,43 @@
     "Keep metric as the primary record for clarity.",
     "Round up when ordering to allow for trim."
   ],
-  "verification": "A standard 90×45×2.4 m piece is around 3.7 bd ft.",
-  "related": ["volume-rectangular-prism"],
+  "verification": "A standard 90\u00d745\u00d72.4 m piece is around 3.7 bd ft.",
+  "related": [
+    "volume-rectangular-prism"
+  ],
   "calculator": {
     "id": "board-feet-metric",
     "title": "Board Feet (Metric)",
     "inputs": [
-      { "key": "thickness", "label": "Thickness", "unit": "mm", "min": 1, "allowUnitSelect": true },
-      { "key": "width", "label": "Width", "unit": "mm", "min": 1, "allowUnitSelect": true },
-      { "key": "length", "label": "Length", "unit": "mm", "min": 1, "allowUnitSelect": true }
+      {
+        "key": "thickness",
+        "label": "Thickness",
+        "unit": "mm",
+        "min": 1,
+        "allowUnitSelect": true
+      },
+      {
+        "key": "width",
+        "label": "Width",
+        "unit": "mm",
+        "min": 1,
+        "allowUnitSelect": true
+      },
+      {
+        "key": "length",
+        "label": "Length",
+        "unit": "mm",
+        "min": 1,
+        "allowUnitSelect": true
+      }
     ],
     "outputs": [
-      { "key": "boardFeet", "label": "Board Feet", "unit": "count", "precision": 2 }
+      {
+        "key": "boardFeet",
+        "label": "Board Feet",
+        "unit": "count",
+        "precision": 2
+      }
     ],
     "compute": "boardFeetMetric"
   }

@@ -2,23 +2,43 @@
   "id": "estimate-sheets",
   "title": "Sheet Count Estimate",
   "category": "Estimating/Takeoff",
-  "tags": ["estimating", "sheets", "lining"],
+  "tags": [
+    "estimating",
+    "sheets",
+    "lining"
+  ],
   "summary": "Estimate sheet count from total area and sheet size.",
   "media": {
     "image": "/illustrations/estimate-sheets.svg",
-    "animation": "/illustrations/animated/estimate-sheets.svg"
+    "animation": "/illustrations/animated/estimate-sheets.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/7479035/pexels-photo-7479035.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Close-up of plywood sheets",
+      "credit": "Photo by cottonbro studio / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/close-up-shot-of-plywood-7479035/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use for lining, cladding, or flooring sheets.",
-  "howToUse": ["Enter total area and sheet area.", "Add waste percentage."],
+  "howToUse": [
+    "Enter total area and sheet area.",
+    "Add waste percentage."
+  ],
   "steps": [
     "Calculate base sheet count by area.",
     "Apply waste allowance.",
     "Round up to the nearest whole sheet."
   ],
   "example": {
-    "inputs": { "totalArea": 48, "sheetArea": 2.88, "wastePercent": 10 },
-    "outputs": { "sheets": 19 },
-    "explanation": "(48 / 2.88) × 1.10 ≈ 18.3 → 19 sheets."
+    "inputs": {
+      "totalArea": 48,
+      "sheetArea": 2.88,
+      "wastePercent": 10
+    },
+    "outputs": {
+      "sheets": 19
+    },
+    "explanation": "(48 / 2.88) \u00d7 1.10 \u2248 18.3 \u2192 19 sheets."
   },
   "commonMistakes": [
     "Forgetting to include openings or cut-outs.",
@@ -29,17 +49,41 @@
     "Use higher waste on complex layouts."
   ],
   "verification": "Check that the count feels right against a quick visual layout.",
-  "related": ["waste-factor", "area-rectangle"],
+  "related": [
+    "waste-factor",
+    "area-rectangle"
+  ],
   "calculator": {
     "id": "estimate-sheets",
     "title": "Sheet Count",
     "inputs": [
-      { "key": "totalArea", "label": "Total Area", "unit": "m2", "min": 0 },
-      { "key": "sheetArea", "label": "Sheet Area", "unit": "m2", "min": 0.1 },
-      { "key": "wastePercent", "label": "Waste %", "unit": "percent", "min": 0, "max": 100 }
+      {
+        "key": "totalArea",
+        "label": "Total Area",
+        "unit": "m2",
+        "min": 0
+      },
+      {
+        "key": "sheetArea",
+        "label": "Sheet Area",
+        "unit": "m2",
+        "min": 0.1
+      },
+      {
+        "key": "wastePercent",
+        "label": "Waste %",
+        "unit": "percent",
+        "min": 0,
+        "max": 100
+      }
     ],
     "outputs": [
-      { "key": "sheets", "label": "Sheets Required", "unit": "count", "precision": 0 }
+      {
+        "key": "sheets",
+        "label": "Sheets Required",
+        "unit": "count",
+        "precision": 0
+      }
     ],
     "compute": "estimateSheets"
   }

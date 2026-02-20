@@ -30,9 +30,9 @@ const Lessons = () => {
               <CardTitle>{lesson.title}</CardTitle>
               <CardDescription>{lesson.summary}</CardDescription>
             </CardHeader>
-            {lesson.image && (
+            {lesson.media?.image && (
               <img
-                src={lesson.image}
+                src={lesson.media.image}
                 alt={lesson.title}
                 className="mt-3 w-full rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-2"
               />

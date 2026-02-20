@@ -2,35 +2,70 @@
   "id": "unit-convert-volume",
   "title": "Volume Conversion",
   "category": "Conversions",
-  "tags": ["conversion", "volume", "units"],
+  "tags": [
+    "conversion",
+    "volume",
+    "units"
+  ],
   "summary": "Convert between cubic metres and cubic millimetres.",
   "media": {
     "image": "/illustrations/unit-convert-volume.svg",
-    "animation": "/illustrations/animated/unit-convert-volume.svg"
+    "animation": "/illustrations/animated/unit-convert-volume.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/30285503/pexels-photo-30285503.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Stack of timber boards",
+      "credit": "Photo by Jean Marc Pampuch / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/stack-of-freshly-cut-lumber-in-sunlight-30285503/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use when detail drawings list volumes in smaller units.",
-  "howToUse": ["Enter the volume in cubic metres to convert."],
+  "howToUse": [
+    "Enter the volume in cubic metres to convert."
+  ],
   "steps": [
     "Confirm the input unit.",
     "Convert to the output unit.",
     "Round to a sensible precision."
   ],
   "example": {
-    "inputs": { "volume": 0.75 },
-    "outputs": { "volumeOut": 750000000 },
-    "explanation": "0.75 m³ = 750,000,000 mm³."
+    "inputs": {
+      "volume": 0.75
+    },
+    "outputs": {
+      "volumeOut": 750000000
+    },
+    "explanation": "0.75 m\u00b3 = 750,000,000 mm\u00b3."
   },
-  "commonMistakes": ["Forgetting that cubic units scale by 1,000,000,000 when converting m³ to mm³."],
-  "siteTips": ["Use cubic metres for ordering materials; reserve mm³ for detail checks."],
-  "verification": "The converted number should be far larger in mm³.",
-  "related": ["unit-convert-area"],
+  "commonMistakes": [
+    "Forgetting that cubic units scale by 1,000,000,000 when converting m\u00b3 to mm\u00b3."
+  ],
+  "siteTips": [
+    "Use cubic metres for ordering materials; reserve mm\u00b3 for detail checks."
+  ],
+  "verification": "The converted number should be far larger in mm\u00b3.",
+  "related": [
+    "unit-convert-area"
+  ],
   "calculator": {
     "id": "unit-convert-volume",
     "title": "Volume Conversion",
     "inputs": [
-      { "key": "volume", "label": "Volume (m³)", "unit": "m3", "min": 0 }
+      {
+        "key": "volume",
+        "label": "Volume (m\u00b3)",
+        "unit": "m3",
+        "min": 0
+      }
     ],
-    "outputs": [{ "key": "volumeOut", "label": "Volume (mm³)", "unit": "mm3", "precision": 0 }],
+    "outputs": [
+      {
+        "key": "volumeOut",
+        "label": "Volume (mm\u00b3)",
+        "unit": "mm3",
+        "precision": 0
+      }
+    ],
     "compute": "convertVolume"
   }
 }

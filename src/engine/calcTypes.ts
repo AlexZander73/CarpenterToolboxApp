@@ -41,6 +41,20 @@ export type CalcSchema = {
   compute: string
 }
 
+export type MediaPhoto = {
+  src: string
+  alt: string
+  credit: string
+  sourceUrl: string
+  license: string
+}
+
+export type Media = {
+  image?: string
+  animation?: string
+  photo?: MediaPhoto
+}
+
 export type Formula = {
   id: string
   title: string
@@ -57,10 +71,7 @@ export type Formula = {
   howToUse: string[]
   steps: string[]
   equation?: string
-  media?: {
-    image?: string
-    animation?: string
-  }
+  media?: Media
   example: {
     inputs: Record<string, number>
     outputs: Record<string, number>
@@ -79,7 +90,10 @@ export type Lesson = {
   summary: string
   tags: string[]
   content: string
-  image?: string
+  media?: {
+    image?: string
+    photo?: MediaPhoto
+  }
 }
 
 export type ReferenceItem = {

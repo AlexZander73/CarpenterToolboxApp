@@ -2,24 +2,43 @@
   "id": "roof-pitch-angle",
   "title": "Roof Pitch: Rise/Run to Degrees",
   "category": "Roofing",
-  "tags": ["roofing", "pitch", "angles"],
+  "tags": [
+    "roofing",
+    "pitch",
+    "angles"
+  ],
   "summary": "Convert rise/run pitch into degrees for set-out.",
   "equation": "Angle = arctan(Rise / Run)",
   "media": {
     "image": "/illustrations/roof-pitch-angle.svg",
-    "animation": "/illustrations/animated/roof-pitch-angle.svg"
+    "animation": "/illustrations/animated/roof-pitch-angle.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/31763538/pexels-photo-31763538.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Roof framing under construction",
+      "credit": "Photo by Cl\u00e9ment Proust / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/roof-construction-with-red-tiles-and-wooden-framework-31763538/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use when plans specify pitch ratio and you need an angle.",
-  "howToUse": ["Divide rise by run.", "Use angle = arctan(rise/run)."],
+  "howToUse": [
+    "Divide rise by run.",
+    "Use angle = arctan(rise/run)."
+  ],
   "steps": [
     "Measure rise and run for one module.",
     "Divide rise by run to get the slope ratio.",
     "Convert the ratio to degrees."
   ],
   "example": {
-    "inputs": { "rise": 1, "run": 4 },
-    "outputs": { "degrees": 14.036 },
-    "explanation": "arctan(1/4) ≈ 14.036°."
+    "inputs": {
+      "rise": 1,
+      "run": 4
+    },
+    "outputs": {
+      "degrees": 14.036
+    },
+    "explanation": "arctan(1/4) \u2248 14.036\u00b0."
   },
   "commonMistakes": [
     "Entering total span instead of run.",
@@ -29,16 +48,37 @@
     "If pitch is given as 1:4, enter rise 1 and run 4.",
     "Check with a pitch gauge for quick confirmation."
   ],
-  "verification": "A 1:4 pitch should be a bit over 14°.",
-  "related": ["roof-pitch-ratio"],
+  "verification": "A 1:4 pitch should be a bit over 14\u00b0.",
+  "related": [
+    "roof-pitch-ratio"
+  ],
   "calculator": {
     "id": "roof-pitch-angle",
     "title": "Pitch to Degrees",
     "inputs": [
-      { "key": "rise", "label": "Rise", "unit": "m", "min": 0.001, "allowUnitSelect": true },
-      { "key": "run", "label": "Run", "unit": "m", "min": 0.001, "allowUnitSelect": true }
+      {
+        "key": "rise",
+        "label": "Rise",
+        "unit": "m",
+        "min": 0.001,
+        "allowUnitSelect": true
+      },
+      {
+        "key": "run",
+        "label": "Run",
+        "unit": "m",
+        "min": 0.001,
+        "allowUnitSelect": true
+      }
     ],
-    "outputs": [{ "key": "degrees", "label": "Angle", "unit": "deg", "precision": 3 }],
+    "outputs": [
+      {
+        "key": "degrees",
+        "label": "Angle",
+        "unit": "deg",
+        "precision": 3
+      }
+    ],
     "compute": "roofPitchToDegrees"
   }
 }

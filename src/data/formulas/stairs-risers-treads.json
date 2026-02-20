@@ -2,11 +2,23 @@
   "id": "stairs-risers-treads",
   "title": "Stair Risers and Treads",
   "category": "Stairs",
-  "tags": ["stairs", "set-out", "rise", "run"],
+  "tags": [
+    "stairs",
+    "set-out",
+    "rise",
+    "run"
+  ],
   "summary": "Estimate riser and tread counts from total rise/run.",
   "media": {
     "image": "/illustrations/stairs-risers-treads.svg",
-    "animation": "/illustrations/animated/stairs-risers-treads.svg"
+    "animation": "/illustrations/animated/stairs-risers-treads.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/7667625/pexels-photo-7667625.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Carpenters building a staircase",
+      "credit": "Photo by \u0410\u043d\u0434\u0440\u0435\u0439 \u0424\u0438\u043b\u043e\u043d\u0435\u043d\u043a\u043e / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/carpenters-building-a-staircase-7667625/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use in early set-out to check stair comfort and counts.",
   "howToUse": [
@@ -20,9 +32,18 @@
     "Calculate actual riser height and tread depth."
   ],
   "example": {
-    "inputs": { "totalRise": 2.7, "totalRun": 3.6, "targetRiser": 0.175 },
-    "outputs": { "risers": 15, "riserHeight": 0.18, "treads": 14, "treadDepth": 0.257 },
-    "explanation": "2.7 / 0.175 ≈ 15 risers, giving ~180 mm riser height."
+    "inputs": {
+      "totalRise": 2.7,
+      "totalRun": 3.6,
+      "targetRiser": 0.175
+    },
+    "outputs": {
+      "risers": 15,
+      "riserHeight": 0.18,
+      "treads": 14,
+      "treadDepth": 0.257
+    },
+    "explanation": "2.7 / 0.175 \u2248 15 risers, giving ~180 mm riser height."
   },
   "commonMistakes": [
     "Forgetting that treads are one fewer than risers.",
@@ -33,20 +54,61 @@
     "Use a story pole for consistent riser heights."
   ],
   "verification": "Riser height should fall within your comfort range.",
-  "related": ["pythagoras-rafter"],
+  "related": [
+    "pythagoras-rafter"
+  ],
   "calculator": {
     "id": "stairs-risers-treads",
     "title": "Stair Counts",
     "inputs": [
-      { "key": "totalRise", "label": "Total Rise", "unit": "m", "min": 0.2, "allowUnitSelect": true },
-      { "key": "totalRun", "label": "Total Run", "unit": "m", "min": 0.2, "allowUnitSelect": true },
-      { "key": "targetRiser", "label": "Target Riser Height", "unit": "m", "min": 0.12, "max": 0.25, "allowUnitSelect": true }
+      {
+        "key": "totalRise",
+        "label": "Total Rise",
+        "unit": "m",
+        "min": 0.2,
+        "allowUnitSelect": true
+      },
+      {
+        "key": "totalRun",
+        "label": "Total Run",
+        "unit": "m",
+        "min": 0.2,
+        "allowUnitSelect": true
+      },
+      {
+        "key": "targetRiser",
+        "label": "Target Riser Height",
+        "unit": "m",
+        "min": 0.12,
+        "max": 0.25,
+        "allowUnitSelect": true
+      }
     ],
     "outputs": [
-      { "key": "risers", "label": "Risers", "unit": "count", "precision": 0 },
-      { "key": "riserHeight", "label": "Actual Riser Height", "unit": "m", "precision": 3 },
-      { "key": "treads", "label": "Treads", "unit": "count", "precision": 0 },
-      { "key": "treadDepth", "label": "Tread Depth", "unit": "m", "precision": 3 }
+      {
+        "key": "risers",
+        "label": "Risers",
+        "unit": "count",
+        "precision": 0
+      },
+      {
+        "key": "riserHeight",
+        "label": "Actual Riser Height",
+        "unit": "m",
+        "precision": 3
+      },
+      {
+        "key": "treads",
+        "label": "Treads",
+        "unit": "count",
+        "precision": 0
+      },
+      {
+        "key": "treadDepth",
+        "label": "Tread Depth",
+        "unit": "m",
+        "precision": 3
+      }
     ],
     "compute": "stairsRisersTreads"
   }

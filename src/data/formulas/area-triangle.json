@@ -2,24 +2,43 @@
   "id": "area-triangle",
   "title": "Area of a Triangle",
   "category": "Geometry",
-  "tags": ["area", "roofing", "set-out"],
+  "tags": [
+    "area",
+    "roofing",
+    "set-out"
+  ],
   "summary": "Find the area of a triangle using base and height.",
-  "equation": "Area = (Base × Height) ÷ 2",
+  "equation": "Area = (Base \u00d7 Height) \u00f7 2",
   "media": {
     "image": "/illustrations/area-triangle.svg",
-    "animation": "/illustrations/animated/area-triangle.svg"
+    "animation": "/illustrations/animated/area-triangle.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/7483040/pexels-photo-7483040.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Carpentry tools and plans",
+      "credit": "Photo by cottonbro studio / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/tools-in-a-carpentry-7483040/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use for gables, triangular roof sections, or bracing layouts.",
-  "howToUse": ["Measure base and height.", "Use Area = (Base × Height) ÷ 2."],
+  "howToUse": [
+    "Measure base and height.",
+    "Use Area = (Base \u00d7 Height) \u00f7 2."
+  ],
   "steps": [
     "Confirm base and height are perpendicular.",
     "Multiply base by height.",
     "Divide by two to get the area."
   ],
   "example": {
-    "inputs": { "base": 4, "height": 2.5 },
-    "outputs": { "area": 5 },
-    "explanation": "4 × 2.5 ÷ 2 = 5 m²."
+    "inputs": {
+      "base": 4,
+      "height": 2.5
+    },
+    "outputs": {
+      "area": 5
+    },
+    "explanation": "4 \u00d7 2.5 \u00f7 2 = 5 m\u00b2."
   },
   "commonMistakes": [
     "Using the sloping side instead of the perpendicular height.",
@@ -30,15 +49,37 @@
     "Use a story pole for consistent heights on repeatable triangles."
   ],
   "verification": "Area should be about half the rectangle with same base and height.",
-  "related": ["area-rectangle", "pythagoras-rafter"],
+  "related": [
+    "area-rectangle",
+    "pythagoras-rafter"
+  ],
   "calculator": {
     "id": "area-triangle",
     "title": "Triangle Area",
     "inputs": [
-      { "key": "base", "label": "Base", "unit": "m", "min": 0, "allowUnitSelect": true },
-      { "key": "height", "label": "Height", "unit": "m", "min": 0, "allowUnitSelect": true }
+      {
+        "key": "base",
+        "label": "Base",
+        "unit": "m",
+        "min": 0,
+        "allowUnitSelect": true
+      },
+      {
+        "key": "height",
+        "label": "Height",
+        "unit": "m",
+        "min": 0,
+        "allowUnitSelect": true
+      }
     ],
-    "outputs": [{ "key": "area", "label": "Area", "unit": "m2", "precision": 3 }],
+    "outputs": [
+      {
+        "key": "area",
+        "label": "Area",
+        "unit": "m2",
+        "precision": 3
+      }
+    ],
     "compute": "areaTriangle"
   }
 }

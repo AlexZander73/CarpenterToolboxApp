@@ -12,11 +12,12 @@ export const validateInputs = (
   const errors: ValidationError[] = []
   inputs.forEach((input) => {
     const value = values[input.key]
-    if (input.required && (value === undefined || Number.isNaN(value))) {
+    const isRequired = input.required !== false
+    if (isRequired && (value === undefined || !Number.isFinite(value))) {
       errors.push({ key: input.key, message: "Required field" })
       return
     }
-    if (value === undefined || Number.isNaN(value)) return
+    if (value === undefined || !Number.isFinite(value)) return
     if (input.min !== undefined && value < input.min) {
       errors.push({ key: input.key, message: `Minimum is ${input.min}` })
     }

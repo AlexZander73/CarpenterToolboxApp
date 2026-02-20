@@ -2,35 +2,71 @@
   "id": "unit-convert-length",
   "title": "Length Conversion (mm/cm/m)",
   "category": "Conversions",
-  "tags": ["conversion", "length", "units"],
+  "tags": [
+    "conversion",
+    "length",
+    "units"
+  ],
   "summary": "Convert between millimetres, centimetres, and metres.",
   "media": {
     "image": "/illustrations/unit-convert-length.svg",
-    "animation": "/illustrations/animated/unit-convert-length.svg"
+    "animation": "/illustrations/animated/unit-convert-length.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/4048078/pexels-photo-4048078.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Tape measure on timber",
+      "credit": "Photo by Erik Mclean / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/close-up-photo-of-measuring-tape-4048078/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use when switching between tape measure units and plan units.",
-  "howToUse": ["Enter a length and select source/target units."],
+  "howToUse": [
+    "Enter a length and select source/target units."
+  ],
   "steps": [
     "Choose the source unit.",
     "Choose the target unit.",
     "Convert using the calculator."
   ],
   "example": {
-    "inputs": { "value": 2400 },
-    "outputs": { "result": 2.4 },
+    "inputs": {
+      "value": 2400
+    },
+    "outputs": {
+      "result": 2.4
+    },
     "explanation": "2400 mm = 2.4 m."
   },
-  "commonMistakes": ["Mixing up cm and mm when reading tapes."],
-  "siteTips": ["Keep a quick reference of 1000 mm = 1 m on site."],
+  "commonMistakes": [
+    "Mixing up cm and mm when reading tapes."
+  ],
+  "siteTips": [
+    "Keep a quick reference of 1000 mm = 1 m on site."
+  ],
   "verification": "Check the decimal place shift is correct.",
-  "related": ["area-rectangle"],
+  "related": [
+    "area-rectangle"
+  ],
   "calculator": {
     "id": "unit-convert-length",
     "title": "Length Conversion",
     "inputs": [
-      { "key": "value", "label": "Value", "unit": "mm", "min": 0, "allowUnitSelect": true }
+      {
+        "key": "value",
+        "label": "Value",
+        "unit": "mm",
+        "min": 0,
+        "allowUnitSelect": true
+      }
     ],
-    "outputs": [{ "key": "result", "label": "Converted", "unit": "m", "precision": 4 }],
+    "outputs": [
+      {
+        "key": "result",
+        "label": "Converted",
+        "unit": "m",
+        "precision": 4
+      }
+    ],
     "compute": "convertLength"
   }
 }

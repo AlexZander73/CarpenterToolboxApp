@@ -25,12 +25,14 @@ This project **must not** republish any copyrighted Standards or NCC text.
 3. Keep explanations concise and original.
 4. Add a calculator schema that references a compute function in `src/calculators/`.
 5. Add the file to `src/data/formulas/index.ts`.
+6. Optional: add `media.photo` with a commercially usable image. Only use photos with clear licenses. Include source URL, credit, and license label.
 
 ## Adding a Lesson
 
 1. Add a Markdown file to `src/data/lessons/`.
 2. Use your own words and examples.
 3. Add an entry in `src/data/lessons/index.ts`.
+4. Optional: add `media.photo` with a commercially usable image and attribution.
 
 ## Adding References
 

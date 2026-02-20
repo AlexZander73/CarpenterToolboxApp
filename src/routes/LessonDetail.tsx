@@ -6,6 +6,7 @@ import { Card, CardDescription, CardHeader, CardTitle } from "../components/ui/C
 import Button from "../components/ui/Button"
 import { useFavorites } from "../state/favoritesStore"
 import { useRecents } from "../state/recentsStore"
+import PhotoCard from "../components/Media/PhotoCard"
 
 const LessonDetail = () => {
   const { id } = useParams()
@@ -36,11 +37,18 @@ const LessonDetail = () => {
               <CardTitle>{lesson.title}</CardTitle>
               <CardDescription>{lesson.summary}</CardDescription>
             </CardHeader>
-            {lesson.image && (
+            {lesson.media?.image && (
               <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-3">
-                <img src={lesson.image} alt={lesson.title} className="w-full" />
+                <img
+                  src={lesson.media.image}
+                  alt={lesson.title}
+                  className="w-full"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             )}
+            <PhotoCard photo={lesson.media?.photo} label="Photo reference" />
             <Button
               variant={isFavorite(lesson.id, "lesson") ? "primary" : "secondary"}
               onClick={() =>

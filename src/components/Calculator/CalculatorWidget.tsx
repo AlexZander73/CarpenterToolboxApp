@@ -51,9 +51,11 @@ const CalculatorWidget = ({
   const errors = useMemo(() => validateInputs(schema.inputs, values), [schema, values])
 
   const handleChange = (key: string, value: string) => {
+    const normalized = value.replace(",", ".")
+    const parsed = normalized === "" ? undefined : Number(normalized)
     setValues((prev) => ({
       ...prev,
-      [key]: value === "" ? undefined : Number(value),
+      [key]: Number.isFinite(parsed) ? parsed : undefined,
     }))
   }
 
@@ -81,7 +83,18 @@ const CalculatorWidget = ({
       return [value]
     })
 
-    const output = fn(...args)
+    let output: Record<string, number>
+    try {
+      output = fn(...args)
+    } catch (err) {
+      setError("Calculation failed. Check inputs and try again.")
+      return
+    }
+    const outputValues = Object.values(output)
+    if (outputValues.some((value) => typeof value !== "number" || !Number.isFinite(value))) {
+      setError("Calculation produced an invalid result. Check inputs and units.")
+      return
+    }
     setResults(output)
     addRecent({ id: schema.id, title: schema.title, type: "calculator" })
     const params = new URLSearchParams(searchParams)
@@ -339,7 +352,7 @@ const CalculatorWidget = ({
           >
             <p className="text-xs text-[rgb(var(--text-muted))]">{output.label}</p>
             <p className="mt-1 text-lg font-semibold">
-              {results[output.key] !== undefined
+              {results[output.key] !== undefined && Number.isFinite(results[output.key])
                 ? roundValue(results[output.key], {
                     mode:
                       output.unit === "m" || output.unit === "mm" || output.unit === "cm"
@@ -372,7 +385,9 @@ const CalculatorWidget = ({
               <li key={run.id}>
                 {new Date(run.timestamp).toLocaleString()} —{" "}
                 {Object.entries(run.outputs)
-                  .map(([key, value]) => `${key}: ${value.toFixed(3)}`)
+                  .map(([key, value]) =>
+                    Number.isFinite(value) ? `${key}: ${value.toFixed(3)}` : `${key}: --`,
+                  )
                   .join(", ")}
               </li>
             ))}

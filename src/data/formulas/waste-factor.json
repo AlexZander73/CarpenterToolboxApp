@@ -2,23 +2,42 @@
   "id": "waste-factor",
   "title": "Waste Factor",
   "category": "Estimating/Takeoff",
-  "tags": ["estimating", "waste", "ordering"],
+  "tags": [
+    "estimating",
+    "waste",
+    "ordering"
+  ],
   "summary": "Apply a waste percentage to a base quantity.",
   "media": {
     "image": "/illustrations/waste-factor.svg",
-    "animation": "/illustrations/animated/waste-factor.svg"
+    "animation": "/illustrations/animated/waste-factor.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/30285503/pexels-photo-30285503.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Stack of timber boards",
+      "credit": "Photo by Jean Marc Pampuch / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/stack-of-freshly-cut-lumber-in-sunlight-30285503/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use when ordering materials to allow for cuts, defects, and offcuts.",
-  "howToUse": ["Enter base quantity and waste percentage.", "Get total required."],
+  "howToUse": [
+    "Enter base quantity and waste percentage.",
+    "Get total required."
+  ],
   "steps": [
     "Confirm the base quantity is in the right unit.",
     "Apply the waste percentage.",
     "Round up for ordering."
   ],
   "example": {
-    "inputs": { "base": 18, "wastePercent": 10 },
-    "outputs": { "total": 19.8 },
-    "explanation": "18 × 1.10 = 19.8."
+    "inputs": {
+      "base": 18,
+      "wastePercent": 10
+    },
+    "outputs": {
+      "total": 19.8
+    },
+    "explanation": "18 \u00d7 1.10 = 19.8."
   },
   "commonMistakes": [
     "Applying waste twice by stacking percentages.",
@@ -29,16 +48,34 @@
     "Use higher waste on complex profiles."
   ],
   "verification": "Check that total is base plus the waste amount.",
-  "related": ["volume-rectangular-prism"],
+  "related": [
+    "volume-rectangular-prism"
+  ],
   "calculator": {
     "id": "waste-factor",
     "title": "Waste Allowance",
     "inputs": [
-      { "key": "base", "label": "Base Quantity", "unit": "count", "min": 0 },
-      { "key": "wastePercent", "label": "Waste %", "unit": "percent", "min": 0, "max": 100 }
+      {
+        "key": "base",
+        "label": "Base Quantity",
+        "unit": "count",
+        "min": 0
+      },
+      {
+        "key": "wastePercent",
+        "label": "Waste %",
+        "unit": "percent",
+        "min": 0,
+        "max": 100
+      }
     ],
     "outputs": [
-      { "key": "total", "label": "Total Required", "unit": "count", "precision": 2 }
+      {
+        "key": "total",
+        "label": "Total Required",
+        "unit": "count",
+        "precision": 2
+      }
     ],
     "compute": "wasteFactor"
   }

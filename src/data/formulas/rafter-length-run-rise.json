@@ -2,23 +2,42 @@
   "id": "rafter-length-run-rise",
   "title": "Rafter Length from Run & Pitch",
   "category": "Roofing",
-  "tags": ["roofing", "rafter", "pitch"],
+  "tags": [
+    "roofing",
+    "rafter",
+    "pitch"
+  ],
   "summary": "Calculate rafter length using run and roof pitch in degrees.",
   "media": {
     "image": "/illustrations/rafter-length-run-rise.svg",
-    "animation": "/illustrations/animated/rafter-length-run-rise.svg"
+    "animation": "/illustrations/animated/rafter-length-run-rise.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/31763538/pexels-photo-31763538.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Roof framing under construction",
+      "credit": "Photo by Cl\u00e9ment Proust / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/roof-construction-with-red-tiles-and-wooden-framework-31763538/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use when you know the run and pitch angle.",
-  "howToUse": ["Enter run and pitch angle.", "Calculate the rafter length."],
+  "howToUse": [
+    "Enter run and pitch angle.",
+    "Calculate the rafter length."
+  ],
   "steps": [
     "Confirm the pitch angle is in degrees.",
     "Divide run by cos(angle).",
     "Report the rafter length."
   ],
   "example": {
-    "inputs": { "run": 3.6, "degrees": 22.5 },
-    "outputs": { "length": 3.89 },
-    "explanation": "3.6 / cos(22.5°) ≈ 3.89 m."
+    "inputs": {
+      "run": 3.6,
+      "degrees": 22.5
+    },
+    "outputs": {
+      "length": 3.89
+    },
+    "explanation": "3.6 / cos(22.5\u00b0) \u2248 3.89 m."
   },
   "commonMistakes": [
     "Using total span instead of run.",
@@ -29,16 +48,36 @@
     "Check the rafter length against stock lengths."
   ],
   "verification": "The rafter length should be slightly longer than the run.",
-  "related": ["pythagoras-rafter", "roof-pitch-angle"],
+  "related": [
+    "pythagoras-rafter",
+    "roof-pitch-angle"
+  ],
   "calculator": {
     "id": "rafter-length-run-rise",
     "title": "Rafter Length (Run + Angle)",
     "inputs": [
-      { "key": "run", "label": "Run", "unit": "m", "min": 0.2, "allowUnitSelect": true },
-      { "key": "degrees", "label": "Pitch Angle", "unit": "deg", "min": 0, "max": 89 }
+      {
+        "key": "run",
+        "label": "Run",
+        "unit": "m",
+        "min": 0.2,
+        "allowUnitSelect": true
+      },
+      {
+        "key": "degrees",
+        "label": "Pitch Angle",
+        "unit": "deg",
+        "min": 0,
+        "max": 89
+      }
     ],
     "outputs": [
-      { "key": "length", "label": "Rafter Length", "unit": "m", "precision": 3 }
+      {
+        "key": "length",
+        "label": "Rafter Length",
+        "unit": "m",
+        "precision": 3
+      }
     ],
     "compute": "rafterLengthFromRunAngle"
   }

@@ -2,23 +2,41 @@
   "id": "area-circle",
   "title": "Area of a Circle",
   "category": "Geometry",
-  "tags": ["area", "layout", "features"],
+  "tags": [
+    "area",
+    "layout",
+    "features"
+  ],
   "summary": "Find the area of a circle using radius or diameter.",
   "media": {
     "image": "/illustrations/area-circle.svg",
-    "animation": "/illustrations/animated/area-circle.svg"
+    "animation": "/illustrations/animated/area-circle.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/7483040/pexels-photo-7483040.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Carpentry tools and plans",
+      "credit": "Photo by cottonbro studio / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/tools-in-a-carpentry-7483040/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use for round features like posts, columns, or circular cut-outs.",
-  "howToUse": ["Measure diameter or radius.", "Use Area = π × r²."],
+  "howToUse": [
+    "Measure diameter or radius.",
+    "Use Area = \u03c0 \u00d7 r\u00b2."
+  ],
   "steps": [
     "If you have diameter, halve it to get radius.",
     "Square the radius.",
-    "Multiply by π to get area."
+    "Multiply by \u03c0 to get area."
   ],
   "example": {
-    "inputs": { "radius": 0.3 },
-    "outputs": { "area": 0.283 },
-    "explanation": "π × 0.3² ≈ 0.283 m²."
+    "inputs": {
+      "radius": 0.3
+    },
+    "outputs": {
+      "area": 0.283
+    },
+    "explanation": "\u03c0 \u00d7 0.3\u00b2 \u2248 0.283 m\u00b2."
   },
   "commonMistakes": [
     "Using diameter as radius.",
@@ -28,15 +46,30 @@
     "Use a trammel or string line for reliable radius measurements.",
     "Keep more decimal places for small circles."
   ],
-  "verification": "Area should be a little under 0.3 m² for a 0.6 m diameter.",
-  "related": ["area-rectangle"],
+  "verification": "Area should be a little under 0.3 m\u00b2 for a 0.6 m diameter.",
+  "related": [
+    "area-rectangle"
+  ],
   "calculator": {
     "id": "area-circle",
     "title": "Circle Area",
     "inputs": [
-      { "key": "radius", "label": "Radius", "unit": "m", "min": 0, "allowUnitSelect": true }
+      {
+        "key": "radius",
+        "label": "Radius",
+        "unit": "m",
+        "min": 0,
+        "allowUnitSelect": true
+      }
     ],
-    "outputs": [{ "key": "area", "label": "Area", "unit": "m2", "precision": 3 }],
+    "outputs": [
+      {
+        "key": "area",
+        "label": "Area",
+        "unit": "m2",
+        "precision": 3
+      }
+    ],
     "compute": "areaCircle"
   }
 }

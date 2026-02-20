@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom"
+import { Outlet, useLocation, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import CommandBar from "./CommandBar"
 import SidebarNav from "./SidebarNav"
@@ -11,6 +11,7 @@ import ErrorBoundary from "./ErrorBoundary"
 const AppShell = () => {
   const [isPaletteOpen, setIsPaletteOpen] = useState(false)
   const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
@@ -37,7 +38,7 @@ const AppShell = () => {
       <div className="mx-auto flex w-full max-w-6xl gap-6 px-4 pb-24 pt-6">
         <SidebarNav />
         <main className="min-w-0 flex-1 transition-soft">
-          <ErrorBoundary>
+          <ErrorBoundary resetKey={location.pathname}>
             <Outlet />
           </ErrorBoundary>
         </main>

@@ -2,23 +2,43 @@
   "id": "volume-rectangular-prism",
   "title": "Volume of a Rectangular Prism",
   "category": "Geometry",
-  "tags": ["volume", "concrete", "excavation"],
+  "tags": [
+    "volume",
+    "concrete",
+    "excavation"
+  ],
   "summary": "Find volume for a box-shaped space using length, width, and height.",
   "media": {
     "image": "/illustrations/volume-rectangular-prism.svg",
-    "animation": "/illustrations/animated/volume-rectangular-prism.svg"
+    "animation": "/illustrations/animated/volume-rectangular-prism.svg",
+    "photo": {
+      "src": "https://images.pexels.com/photos/30285503/pexels-photo-30285503.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Stack of timber boards",
+      "credit": "Photo by Jean Marc Pampuch / Pexels",
+      "sourceUrl": "https://www.pexels.com/photo/stack-of-freshly-cut-lumber-in-sunlight-30285503/",
+      "license": "Pexels License"
+    }
   },
   "whenToUse": "Use for concrete, excavation, or material volume estimates.",
-  "howToUse": ["Measure length, width, height.", "Multiply L × W × H."],
+  "howToUse": [
+    "Measure length, width, height.",
+    "Multiply L \u00d7 W \u00d7 H."
+  ],
   "steps": [
     "Convert all dimensions to the same unit.",
     "Multiply length by width, then by height.",
     "Record in cubic units."
   ],
   "example": {
-    "inputs": { "length": 2.5, "width": 1.2, "height": 0.3 },
-    "outputs": { "volume": 0.9 },
-    "explanation": "2.5 × 1.2 × 0.3 = 0.9 m³."
+    "inputs": {
+      "length": 2.5,
+      "width": 1.2,
+      "height": 0.3
+    },
+    "outputs": {
+      "volume": 0.9
+    },
+    "explanation": "2.5 \u00d7 1.2 \u00d7 0.3 = 0.9 m\u00b3."
   },
   "commonMistakes": [
     "Using millimetres without conversion.",
@@ -29,16 +49,43 @@
     "Round up to the nearest delivery increment."
   ],
   "verification": "Check that the volume aligns with a quick box estimate.",
-  "related": ["area-rectangle"],
+  "related": [
+    "area-rectangle"
+  ],
   "calculator": {
     "id": "volume-rectangular-prism",
     "title": "Rectangular Volume",
     "inputs": [
-      { "key": "length", "label": "Length", "unit": "m", "min": 0, "allowUnitSelect": true },
-      { "key": "width", "label": "Width", "unit": "m", "min": 0, "allowUnitSelect": true },
-      { "key": "height", "label": "Height", "unit": "m", "min": 0, "allowUnitSelect": true }
+      {
+        "key": "length",
+        "label": "Length",
+        "unit": "m",
+        "min": 0,
+        "allowUnitSelect": true
+      },
+      {
+        "key": "width",
+        "label": "Width",
+        "unit": "m",
+        "min": 0,
+        "allowUnitSelect": true
+      },
+      {
+        "key": "height",
+        "label": "Height",
+        "unit": "m",
+        "min": 0,
+        "allowUnitSelect": true
+      }
     ],
-    "outputs": [{ "key": "volume", "label": "Volume", "unit": "m3", "precision": 3 }],
+    "outputs": [
+      {
+        "key": "volume",
+        "label": "Volume",
+        "unit": "m3",
+        "precision": 3
+      }
+    ],
     "compute": "volumeRectangular"
   }
 }

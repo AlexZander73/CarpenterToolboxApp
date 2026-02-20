@@ -3,6 +3,7 @@ import React from "react"
 
 type ErrorBoundaryProps = {
   children: ReactNode
+  resetKey?: string
 }
 
 type ErrorBoundaryState = {
@@ -14,6 +15,16 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
   static getDerivedStateFromError() {
     return { hasError: true }
+  }
+
+  componentDidCatch(error: Error) {
+    console.error("UI crashed:", error)
+  }
+
+  componentDidUpdate(prevProps: ErrorBoundaryProps) {
+    if (this.state.hasError && this.props.resetKey !== prevProps.resetKey) {
+      this.setState({ hasError: false })
+    }
   }
 
   render() {

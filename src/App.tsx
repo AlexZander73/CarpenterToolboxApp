@@ -1,6 +1,7 @@
-import { HashRouter, Route, Routes } from "react-router-dom"
+import { HashRouter, Route, Routes, useLocation } from "react-router-dom"
 import AppShell from "./components/Layout/AppShell"
 import ScrollToTop from "./components/Layout/ScrollToTop"
+import ErrorBoundary from "./components/Layout/ErrorBoundary"
 import Home from "./routes/Home"
 import FormulaLibrary from "./routes/FormulaLibrary"
 import FormulaDetail from "./routes/FormulaDetail"
@@ -19,12 +20,21 @@ import JobReport from "./routes/JobReport"
 import CalculationSlip from "./routes/CalculationSlip"
 import BackupRestore from "./routes/BackupRestore"
 
+const ShellWithBoundary = () => {
+  const location = useLocation()
+  return (
+    <ErrorBoundary resetKey={location.pathname}>
+      <AppShell />
+    </ErrorBoundary>
+  )
+}
+
 const App = () => {
   return (
     <HashRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<AppShell />}>
+        <Route path="/" element={<ShellWithBoundary />}>
           <Route index element={<Home />} />
           <Route path="formulas" element={<FormulaLibrary />} />
           <Route path="formulas/:id" element={<FormulaDetail />} />

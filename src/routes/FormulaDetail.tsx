@@ -8,6 +8,7 @@ import Button from "../components/ui/Button"
 import { useFavorites } from "../state/favoritesStore"
 import { usePins } from "../state/pinsStore"
 import { useRecents } from "../state/recentsStore"
+import PhotoCard from "../components/Media/PhotoCard"
 
 const FormulaDetail = () => {
   const { id } = useParams()
@@ -41,19 +42,30 @@ const FormulaDetail = () => {
               <CardTitle>{formula.title}</CardTitle>
               <CardDescription>{formula.summary}</CardDescription>
             </CardHeader>
-            {formula.media?.image && (
+            {(formula.media?.image || formula.media?.photo || formula.media?.animation) && (
               <div className="mt-4 grid gap-4 md:grid-cols-2">
-                <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-3">
-                  <p className="text-xs text-[rgb(var(--text-muted))]">Example</p>
-                  <img src={formula.media.image} alt={formula.title} className="mt-2 w-full" />
-                </div>
-                {formula.media.animation && (
+                {formula.media?.image && (
+                  <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-3">
+                    <p className="text-xs text-[rgb(var(--text-muted))]">Example</p>
+                    <img
+                      src={formula.media.image}
+                      alt={formula.title}
+                      className="mt-2 w-full"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                )}
+                <PhotoCard photo={formula.media?.photo} />
+                {formula.media?.animation && (
                   <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-3">
                     <p className="text-xs text-[rgb(var(--text-muted))]">Animated guide</p>
                     <img
                       src={formula.media.animation}
                       alt={`${formula.title} animation`}
                       className="mt-2 w-full"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 )}
