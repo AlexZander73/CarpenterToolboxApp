@@ -63,10 +63,10 @@ const photos = {
     "https://www.pexels.com/photo/man-using-jigsaw-1094766/",
   ),
   sander: photo(
-    "https://images.pexels.com/photos/34006735/pexels-photo-34006735.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/5466146/pexels-photo-5466146.jpeg?auto=compress&cs=tinysrgb&w=1600",
     "Sanding timber",
-    "Photo by Gantas Vaiciulenas / Pexels",
-    "https://www.pexels.com/photo/man-sanding-a-wooden-board-34006735/",
+    "Photo by Antoni Shkraba Studio / Pexels",
+    "https://www.pexels.com/photo/close-up-of-sanding-wood-5466146/",
   ),
   router: photo(
     "https://images.pexels.com/photos/6790930/pexels-photo-6790930.jpeg?auto=compress&cs=tinysrgb&w=1600",
