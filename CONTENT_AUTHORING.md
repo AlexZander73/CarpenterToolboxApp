@@ -40,6 +40,13 @@ This project **must not** republish any copyrighted Standards or NCC text.
 2. Include only identifiers, short summaries, tags, and official URLs.
 3. Do **not** include clause text or tables.
 
+## Adding Tools
+
+1. Add entries to `src/data/tools/index.ts`.
+2. Include: title, summary, best uses, other uses, safety notes, maintenance, tags.
+3. Add `media.photo` with licensed sources and attribution.
+4. Prefer photos from Pexels or other commercial-friendly sources with clear licenses.
+
 ## Updating Calculators
 
 1. Add a pure function to `src/calculators/`.

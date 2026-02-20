@@ -58,6 +58,7 @@ const CommandPalette = ({ isOpen, onClose }: CommandPaletteProps) => {
     const formulas = results.filter((r) => r.type === "formula")
     const lessons = results.filter((r) => r.type === "lesson")
     const references = results.filter((r) => r.type === "reference")
+    const tools = results.filter((r) => r.type === "tool")
     const presetMatches = presets.filter((preset) =>
       `${preset.name} ${preset.calculatorId}`.toLowerCase().includes(query.toLowerCase()),
     )
@@ -67,7 +68,7 @@ const CommandPalette = ({ isOpen, onClose }: CommandPaletteProps) => {
     const jobMatches = jobs.filter((job) =>
       job.name.toLowerCase().includes(query.toLowerCase()),
     )
-    return { formulas, lessons, references, presetMatches, jobPresetMatches, jobMatches }
+    return { formulas, lessons, references, tools, presetMatches, jobPresetMatches, jobMatches }
   }, [presets, query, results, jobs, jobPresets])
 
   if (!isOpen) return null
@@ -83,13 +84,13 @@ const CommandPalette = ({ isOpen, onClose }: CommandPaletteProps) => {
       >
         <div className="relative">
           <Search className="pointer-events-none absolute left-3 top-2.5 h-4 w-4 text-[rgb(var(--text-muted))]" />
-          <Input
-            autoFocus
-            placeholder="Search formulas, lessons, references"
-            className="pl-9"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-          />
+            <Input
+              autoFocus
+              placeholder="Search formulas, lessons, tools, references"
+              className="pl-9"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+            />
         </div>
         <div className="mt-4 space-y-4 text-sm">
           {results.length === 0 ? (
@@ -128,6 +129,19 @@ const CommandPalette = ({ isOpen, onClose }: CommandPaletteProps) => {
                     <ResultLink
                       key={item.id}
                       to="/references"
+                      title={item.title}
+                      summary={item.summary}
+                      onClose={onClose}
+                    />
+                  ))}
+                </Section>
+              )}
+              {grouped.tools.length > 0 && (
+                <Section title="Tools">
+                  {grouped.tools.map((item) => (
+                    <ResultLink
+                      key={item.id}
+                      to={`/tools/${item.id}`}
                       title={item.title}
                       summary={item.summary}
                       onClose={onClose}

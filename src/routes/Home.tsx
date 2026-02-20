@@ -15,7 +15,7 @@ const Home = () => {
         <CardHeader>
           <CardTitle>Home Dashboard</CardTitle>
           <CardDescription>
-            Search formulas, save favourites, and jump back into recent work.
+            Search formulas and tools, save favourites, and jump back into recent work.
           </CardDescription>
         </CardHeader>
       </Card>
@@ -51,9 +51,9 @@ const Home = () => {
         <Card className="p-5">
           <CardHeader>
             <CardTitle>Recently Viewed</CardTitle>
-            <CardDescription>
-              Track your last formulas, lessons, and references.
-            </CardDescription>
+          <CardDescription>
+            Track your last formulas, lessons, tools, and references.
+          </CardDescription>
           </CardHeader>
           {recents.length === 0 ? (
             <p className="text-sm text-[rgb(var(--text-muted))]">
@@ -78,7 +78,7 @@ const Home = () => {
         <CardHeader>
           <CardTitle>Favourites</CardTitle>
           <CardDescription>
-            Save formulas and lessons for fast access on site.
+            Save formulas, lessons, and tools for fast access on site.
           </CardDescription>
         </CardHeader>
         {favorites.length === 0 ? (

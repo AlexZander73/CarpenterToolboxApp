@@ -3,7 +3,7 @@ import { loadState, saveState } from "./storage"
 
 export type FavoriteItem = {
   id: string
-  type: "formula" | "lesson" | "reference" | "preset"
+  type: "formula" | "lesson" | "reference" | "preset" | "tool"
   title: string
 }
 

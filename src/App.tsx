@@ -8,6 +8,8 @@ import FormulaDetail from "./routes/FormulaDetail"
 import Wizards from "./routes/Wizards"
 import Lessons from "./routes/Lessons"
 import LessonDetail from "./routes/LessonDetail"
+import Tools from "./routes/Tools"
+import ToolDetail from "./routes/ToolDetail"
 import References from "./routes/References"
 import SettingsPage from "./routes/Settings"
 import Search from "./routes/Search"
@@ -41,6 +43,8 @@ const App = () => {
           <Route path="wizards" element={<Wizards />} />
           <Route path="lessons" element={<Lessons />} />
           <Route path="lessons/:id" element={<LessonDetail />} />
+          <Route path="tools" element={<Tools />} />
+          <Route path="tools/:id" element={<ToolDetail />} />
           <Route path="references" element={<References />} />
           <Route path="search" element={<Search />} />
           <Route path="saved" element={<Saved />} />

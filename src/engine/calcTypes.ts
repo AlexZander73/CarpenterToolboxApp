@@ -55,6 +55,35 @@ export type Media = {
   photo?: MediaPhoto
 }
 
+export type ToolType =
+  | "Hand Tool"
+  | "Power Tool"
+  | "Measuring & Layout"
+  | "Clamping & Holding"
+  | "Safety & PPE"
+  | "Site & Access"
+  | "Storage & Carry"
+  | "Adjacent Trade"
+  | "Accessory"
+
+export type Tool = {
+  id: string
+  title: string
+  type: ToolType
+  category: string
+  tags: string[]
+  summary: string
+  bestUses: string[]
+  otherUses: string[]
+  safetyNotes: string[]
+  maintenance: string[]
+  media: {
+    photo: MediaPhoto
+    usePhoto?: MediaPhoto
+  }
+  relatedTools: string[]
+}
+
 export type Formula = {
   id: string
   title: string

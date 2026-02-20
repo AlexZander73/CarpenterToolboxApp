@@ -158,7 +158,10 @@ const CalculatorWidget = ({
     const nextUnits: Record<string, string> = {}
     schema.inputs.forEach((input) => {
       const paramValue = searchParams.get(input.key)
-      if (paramValue) nextValues[input.key] = Number(paramValue)
+      if (paramValue) {
+        const parsed = Number(paramValue)
+        if (Number.isFinite(parsed)) nextValues[input.key] = parsed
+      }
       if (input.allowUnitSelect) {
         const paramUnit = searchParams.get(`${input.key}Unit`)
         if (paramUnit) nextUnits[input.key] = paramUnit

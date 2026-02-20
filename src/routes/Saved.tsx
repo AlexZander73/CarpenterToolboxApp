@@ -1,4 +1,5 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "../components/ui/Card"
+import { Link } from "react-router-dom"
 import { useFavorites } from "../state/favoritesStore"
 import { usePresets } from "../state/presetsStore"
 
@@ -10,30 +11,41 @@ const Saved = () => {
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle>Saved Items</CardTitle>
-          <CardDescription>
-            Formulas, lessons, references, and presets you have saved.
-          </CardDescription>
-        </CardHeader>
+        <CardTitle>Saved Items</CardTitle>
+        <CardDescription>
+          Formulas, lessons, tools, references, and presets you have saved.
+        </CardDescription>
+      </CardHeader>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Favourites</CardTitle>
-          <CardDescription>Saved items across the app.</CardDescription>
-        </CardHeader>
-        {favorites.length === 0 ? (
-          <p className="text-sm text-[rgb(var(--text-muted))]">
-            Save a formula or lesson to see it here.
-          </p>
-        ) : (
+        <CardTitle>Favourites</CardTitle>
+        <CardDescription>Saved items across the app.</CardDescription>
+      </CardHeader>
+      {favorites.length === 0 ? (
+        <p className="text-sm text-[rgb(var(--text-muted))]">
+          Save a formula, lesson, or tool to see it here.
+        </p>
+      ) : (
           <ul className="space-y-2 text-sm">
             {favorites.map((fav) => (
               <li key={`${fav.type}-${fav.id}`}>
-                {fav.title}{" "}
-                <span className="text-xs text-[rgb(var(--text-muted))]">
-                  ({fav.type})
-                </span>
+                <Link
+                  to={
+                    fav.type === "formula"
+                      ? `/formulas/${fav.id}`
+                      : fav.type === "lesson"
+                        ? `/lessons/${fav.id}`
+                        : fav.type === "tool"
+                          ? `/tools/${fav.id}`
+                          : "/references"
+                  }
+                  className="font-medium text-[rgb(var(--text))]"
+                >
+                  {fav.title}
+                </Link>{" "}
+                <span className="text-xs text-[rgb(var(--text-muted))]">({fav.type})</span>
               </li>
             ))}
           </ul>

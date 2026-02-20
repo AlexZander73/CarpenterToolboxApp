@@ -7,6 +7,7 @@ import {
   Sparkles,
   Bookmark,
   Briefcase,
+  Wrench,
 } from "lucide-react"
 import { cn } from "../../utils/cn"
 
@@ -14,6 +15,7 @@ const navItems = [
   { to: "/", label: "Home", icon: Home },
   { to: "/jobs", label: "Jobs", icon: Briefcase },
   { to: "/formulas", label: "Formulas", icon: Calculator },
+  { to: "/tools", label: "Tools", icon: Wrench },
   { to: "/wizards", label: "Wizards", icon: Sparkles },
   { to: "/lessons", label: "Lessons", icon: Library },
   { to: "/references", label: "References", icon: Layers },

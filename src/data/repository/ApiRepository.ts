@@ -1,5 +1,5 @@
 import type { ContentRepository, SearchResult } from "./ContentRepository"
-import type { Formula, Lesson, ReferenceItem } from "../../engine/calcTypes"
+import type { Formula, Lesson, ReferenceItem, Tool } from "../../engine/calcTypes"
 
 class ApiRepository implements ContentRepository {
   async listFormulas(): Promise<Formula[]> {
@@ -20,6 +20,14 @@ class ApiRepository implements ContentRepository {
 
   async listReferences(): Promise<ReferenceItem[]> {
     return []
+  }
+
+  async listTools(): Promise<Tool[]> {
+    return []
+  }
+
+  async getTool(): Promise<Tool | undefined> {
+    return undefined
   }
 
   async search(): Promise<SearchResult[]> {

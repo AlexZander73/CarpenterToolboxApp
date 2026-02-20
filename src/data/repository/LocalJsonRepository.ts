@@ -1,8 +1,9 @@
 import type { ContentRepository, SearchResult } from "./ContentRepository"
-import type { Formula, Lesson, ReferenceItem } from "../../engine/calcTypes"
+import type { Formula, Lesson, ReferenceItem, Tool } from "../../engine/calcTypes"
 import formulasRaw from "../formulas/index"
 import lessonsRaw from "../lessons/index"
 import referencesRaw from "../references/index"
+import toolsRaw from "../tools"
 
 const normalizeQuery = (query: string) => query.trim().toLowerCase()
 
@@ -10,6 +11,7 @@ class LocalJsonRepository implements ContentRepository {
   private formulas: Formula[] = formulasRaw
   private lessons: Lesson[] = lessonsRaw
   private references: ReferenceItem[] = referencesRaw
+  private tools: Tool[] = toolsRaw
 
   async listFormulas() {
     return this.formulas
@@ -29,6 +31,14 @@ class LocalJsonRepository implements ContentRepository {
 
   async listReferences() {
     return this.references
+  }
+
+  async listTools() {
+    return this.tools
+  }
+
+  async getTool(id: string) {
+    return this.tools.find((item) => item.id === id)
   }
 
   async search(query: string): Promise<SearchResult[]> {
@@ -55,6 +65,7 @@ class LocalJsonRepository implements ContentRepository {
     this.formulas.forEach((item) => addIfMatch(item, "formula"))
     this.lessons.forEach((item) => addIfMatch(item, "lesson"))
     this.references.forEach((item) => addIfMatch(item, "reference"))
+    this.tools.forEach((item) => addIfMatch(item, "tool"))
 
     return results
   }

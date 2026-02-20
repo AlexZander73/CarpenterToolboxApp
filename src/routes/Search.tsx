@@ -18,7 +18,7 @@ const Search = () => {
       <CardHeader>
         <CardTitle>Search</CardTitle>
         <CardDescription>
-          Use the command palette to search formulas, lessons, and references.
+          Use the command palette to search formulas, lessons, tools, and references.
         </CardDescription>
       </CardHeader>
       <div className="space-y-4">
@@ -41,6 +41,8 @@ const Search = () => {
                       ? `/formulas/${result.id}`
                       : result.type === "lesson"
                         ? `/lessons/${result.id}`
+                        : result.type === "tool"
+                          ? `/tools/${result.id}`
                         : "/references"
                   }
                   className="font-medium text-[rgb(var(--text))]"

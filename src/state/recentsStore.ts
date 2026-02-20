@@ -3,7 +3,7 @@ import { loadState, saveState } from "./storage"
 
 export type RecentItem = {
   id: string
-  type: "formula" | "lesson" | "reference" | "calculator"
+  type: "formula" | "lesson" | "reference" | "calculator" | "tool"
   title: string
   timestamp: number
 }

@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom"
-import { Calculator, Home, Search, Sparkles, Bookmark, Briefcase } from "lucide-react"
+import { Calculator, Home, Sparkles, Bookmark, Briefcase, Wrench } from "lucide-react"
 import { cn } from "../../utils/cn"
 
 const bottomItems = [
   { to: "/", label: "Home", icon: Home },
-  { to: "/search", label: "Search", icon: Search },
   { to: "/jobs", label: "Jobs", icon: Briefcase },
   { to: "/formulas", label: "Formulas", icon: Calculator },
+  { to: "/tools", label: "Tools", icon: Wrench },
   { to: "/wizards", label: "Wizards", icon: Sparkles },
   { to: "/saved", label: "Saved", icon: Bookmark },
 ]

@@ -23,7 +23,7 @@ const CommandBar = ({ onOpenPalette }: CommandBarProps) => {
             <Input
               id="global-search"
               type="search"
-              placeholder="Search formulas, lessons, references (Cmd+K)"
+              placeholder="Search formulas, lessons, tools, references (Cmd+K)"
               className="pl-9"
               onFocus={onOpenPalette}
             />
