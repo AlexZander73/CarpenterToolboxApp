@@ -32,7 +32,7 @@ const FormulaLibrary = () => {
               <img
                 src={formula.media.image}
                 alt={formula.title}
-                className="mt-3 w-full rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-2"
+                className="mt-3 w-full max-h-40 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-2 object-contain"
               />
             )}
             <p className="text-xs text-[rgb(var(--text-muted))]">

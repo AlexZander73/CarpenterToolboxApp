@@ -16,7 +16,7 @@ const PhotoCard = ({ photo, label = "Photo reference" }: PhotoCardProps) => {
       <img
         src={photo.src}
         alt={photo.alt}
-        className="mt-2 w-full rounded-lg object-cover"
+        className="mt-2 w-full max-h-64 rounded-lg object-cover"
         loading="lazy"
         decoding="async"
       />

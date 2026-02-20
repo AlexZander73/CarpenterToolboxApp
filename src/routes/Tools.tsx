@@ -22,6 +22,7 @@ const Tools = () => {
   const [tools, setTools] = useState<Tool[]>([])
   const [query, setQuery] = useState("")
   const [filter, setFilter] = useState("all")
+  const [scope, setScope] = useState("carpentry")
   const isOnline = useOnlineStatus()
 
   useEffect(() => {
@@ -31,6 +32,10 @@ const Tools = () => {
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     return tools.filter((tool) => {
+      const scopeMatch =
+        scope === "all" ||
+        (scope === "carpentry" && tool.type !== "Adjacent Trade") ||
+        (scope === "adjacent" && tool.type === "Adjacent Trade")
       const matchQuery =
         !q ||
         `${tool.title} ${tool.summary} ${tool.tags.join(" ")}`
@@ -47,9 +52,9 @@ const Tools = () => {
         (filter === "site" && tool.type === "Site & Access") ||
         (filter === "adjacent" && tool.type === "Adjacent Trade")
 
-      return matchQuery && matchFilter
+      return scopeMatch && matchQuery && matchFilter
     })
-  }, [tools, query, filter])
+  }, [tools, query, filter, scope])
 
   return (
     <div className="space-y-6">
@@ -65,6 +70,15 @@ const Tools = () => {
             placeholder="Search tools..."
             value={query}
             onChange={(event) => setQuery(event.target.value)}
+          />
+          <SegmentedControl
+            options={[
+              { value: "carpentry", label: "Carpentry" },
+              { value: "adjacent", label: "Adjacent" },
+              { value: "all", label: "All" },
+            ]}
+            value={scope}
+            onChange={setScope}
           />
           <SegmentedControl options={filters} value={filter} onChange={setFilter} />
         </div>

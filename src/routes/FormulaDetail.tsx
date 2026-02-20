@@ -8,7 +8,7 @@ import Button from "../components/ui/Button"
 import { useFavorites } from "../state/favoritesStore"
 import { usePins } from "../state/pinsStore"
 import { useRecents } from "../state/recentsStore"
-import PhotoCard from "../components/Media/PhotoCard"
+import MediaTabs from "../components/Media/MediaTabs"
 
 const FormulaDetail = () => {
   const { id } = useParams()
@@ -43,32 +43,33 @@ const FormulaDetail = () => {
               <CardDescription>{formula.summary}</CardDescription>
             </CardHeader>
             {(formula.media?.image || formula.media?.photo || formula.media?.animation) && (
-              <div className="mt-4 grid gap-4 md:grid-cols-2">
-                {formula.media?.image && (
-                  <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-3">
-                    <p className="text-xs text-[rgb(var(--text-muted))]">Example</p>
-                    <img
-                      src={formula.media.image}
-                      alt={formula.title}
-                      className="mt-2 w-full"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                )}
-                <PhotoCard photo={formula.media?.photo} />
-                {formula.media?.animation && (
-                  <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-3">
-                    <p className="text-xs text-[rgb(var(--text-muted))]">Animated guide</p>
-                    <img
-                      src={formula.media.animation}
-                      alt={`${formula.title} animation`}
-                      className="mt-2 w-full"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                )}
+              <div className="mt-4">
+                <MediaTabs
+                  title="Visual reference"
+                  tabs={[
+                    formula.media?.image
+                      ? {
+                          key: "illustration",
+                          label: "Illustration",
+                          type: "image",
+                          src: formula.media.image,
+                          alt: `${formula.title} illustration`,
+                        }
+                      : null,
+                    formula.media?.photo
+                      ? { key: "photo", label: "Photo", type: "photo", photo: formula.media.photo }
+                      : null,
+                    formula.media?.animation
+                      ? {
+                          key: "animation",
+                          label: "Animated",
+                          type: "image",
+                          src: formula.media.animation,
+                          alt: `${formula.title} animated guide`,
+                        }
+                      : null,
+                  ].filter(Boolean) as any}
+                />
               </div>
             )}
             <div className="flex flex-wrap gap-2">

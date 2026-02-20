@@ -6,7 +6,7 @@ import { Card, CardDescription, CardHeader, CardTitle } from "../components/ui/C
 import Button from "../components/ui/Button"
 import { useFavorites } from "../state/favoritesStore"
 import { useRecents } from "../state/recentsStore"
-import PhotoCard from "../components/Media/PhotoCard"
+import MediaTabs from "../components/Media/MediaTabs"
 
 const LessonDetail = () => {
   const { id } = useParams()
@@ -37,18 +37,25 @@ const LessonDetail = () => {
               <CardTitle>{lesson.title}</CardTitle>
               <CardDescription>{lesson.summary}</CardDescription>
             </CardHeader>
-            {lesson.media?.image && (
-              <div className="rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--bg))] p-3">
-                <img
-                  src={lesson.media.image}
-                  alt={lesson.title}
-                  className="w-full"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+            {(lesson.media?.image || lesson.media?.photo) && (
+              <MediaTabs
+                title="Visual reference"
+                tabs={[
+                  lesson.media?.image
+                    ? {
+                        key: "illustration",
+                        label: "Illustration",
+                        type: "image",
+                        src: lesson.media.image,
+                        alt: `${lesson.title} illustration`,
+                      }
+                    : null,
+                  lesson.media?.photo
+                    ? { key: "photo", label: "Photo", type: "photo", photo: lesson.media.photo }
+                    : null,
+                ].filter(Boolean) as any}
+              />
             )}
-            <PhotoCard photo={lesson.media?.photo} label="Photo reference" />
             <Button
               variant={isFavorite(lesson.id, "lesson") ? "primary" : "secondary"}
               onClick={() =>
